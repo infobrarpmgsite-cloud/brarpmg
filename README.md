@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BRAR PMG - Property Management Website
 
-## Getting Started
+A modern, responsive property management website built with Next.js and styled with Tailwind CSS. The website features property listings, image galleries, and booking widgets.
 
-First, run the development server:
+## 🚀 Getting Started
 
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/brar-pmg.git
+cd brar-pmg
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up environment variables:
+   - Copy `.env.example` to `.env.local`
+   - Update the values in `.env.local` with your actual widget IDs
+```bash
+cp .env.example .env.local
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Environment Variables
 
-## Learn More
+The following environment variables need to be set in your `.env.local` file:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Hospitable Widget IDs
+NEXT_PUBLIC_VIP107_WIDGET_ID=your_vip107_widget_id
+NEXT_PUBLIC_ALLENDATE_WIDGET_ID=your_allendate_widget_id
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Hospitable Base URL
+NEXT_PUBLIC_HOSPITABLE_BASE_URL=your_hospitable_base_url
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⚠️ **Important**: Never commit your `.env.local` file to version control. It's already added to `.gitignore`.
 
-## Deploy on Vercel
+### Adding Property Images
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Place property images in the appropriate directory:
+```
+src/assets/images/properties/
+├── property-name/
+    ├── Bedroom/
+    ├── Living room/
+    ├── Kitchen/
+    └── ...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Use `.jpg`, `.jpeg`, `.png`, or `.webp` formats (AVIF not currently supported)
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/                  # Next.js app directory
+│   ├── about/           # About page
+│   ├── contact/         # Contact page
+│   ├── properties/      # Properties listing
+│   └── property/        # Individual property pages
+├── assets/
+│   └── images/          # Property images
+├── components/          # Reusable components
+└── types/               # TypeScript type definitions
+```
+
+## 🛠️ Built With
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request

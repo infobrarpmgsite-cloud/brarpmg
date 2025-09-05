@@ -1,0 +1,13 @@
+Placeholder for VIP-107 images
+
+Add your property images here:
+- image1.jpg
+- image2.jpg  
+- image3.jpg
+
+Or use descriptive names like:
+- exterior.jpg
+- living-room.jpg
+- bedroom.jpg
+- kitchen.jpg
+- bathroom.jpg
