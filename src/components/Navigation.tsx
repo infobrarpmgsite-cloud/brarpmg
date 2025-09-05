@@ -6,10 +6,13 @@ import { usePathname } from 'next/navigation';
 const Navigation = () => {
   const pathname = usePathname();
 
+  // Get the base path from Next.js config
+  const basePath = process.env.NODE_ENV === 'production' ? '/brarpmg' : '';
+  
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: 'Home', href: `${basePath}/` },
+    { name: 'About Us', href: `${basePath}/about` },
+    { name: 'Contact Us', href: `${basePath}/contact` },
   ];
 
   return (
@@ -27,7 +30,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 className={`px-4 py-3 rounded-md text-base font-medium transition-colors duration-200 ${
-                  pathname === item.href
+                  pathname === item.href || (basePath && pathname === item.href.replace(basePath, ''))
                     ? 'text-white bg-blue-700'
                     : 'text-blue-100 hover:text-white hover:bg-blue-700'
                 }`}
