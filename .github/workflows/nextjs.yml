@@ -79,6 +79,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Export env
+        run: |
+            echo "NEXT_PUBLIC_HOSPITABLE_BASE_URL"=${{secrets.NEXT_PUBLIC_HOSPITABLE_BASE_URL}}" >> $GITHUB_ENV
+            echo "NEXT_PUBLIC_ALLENDATE_WIDGET_ID"=${{secrets.NEXT_PUBLIC_ALLENDATE_WIDGET_ID}}" >> $GITHUB_ENV
+            echo "NEXT_PUBLIC_VIP107_WIDGET_ID"=${{secrets.NEXT_PUBLIC_VIP107_WIDGET_ID}}" >> $GITHUB_ENV
 
   # Deployment job
   deploy:
