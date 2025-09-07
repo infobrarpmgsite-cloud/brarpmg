@@ -1,38 +1,38 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+"use client";
+
 import "./globals.css";
+import { Outfit, Manrope } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
+  weight: ["400", "500", "600", "700"],
 });
-
-export const metadata: Metadata = {
-  title: "BRAR PMG - Property Management",
-  description: "Professional property management services",
-};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
-      >
+    <html lang="en" className={`${outfit.variable} ${manrope.variable}`}>
+      <head>
+        <title>BRAR PMG</title>
+        <meta name="description" content="BRAR Property Management Group" />
+      </head>
+      <body className="font-sans antialiased">
         <Navigation />
-        <main className="min-h-screen" style={{ backgroundColor: "whitesmoke" }}>
-          {children}
-        </main>
+        <main style={{ backgroundColor: "#efefef" }}>{children}</main>
         <Footer />
       </body>
     </html>
