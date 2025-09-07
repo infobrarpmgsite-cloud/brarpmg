@@ -84,6 +84,7 @@ jobs:
              NEXT_PUBLIC_HOSPITABLE_BASE_URL: ${{secrets.NEXT_PUBLIC_HOSPITABLE_BASE_URL}}
              NEXT_PUBLIC_ALLENDATE_WIDGET_ID: ${{secrets.NEXT_PUBLIC_ALLENDATE_WIDGET_ID}}
              NEXT_PUBLIC_VIP107_WIDGET_ID: ${{secrets.NEXT_PUBLIC_VIP107_WIDGET_ID}}
+        run: npm run build
 
   # Deployment job
   deploy:
