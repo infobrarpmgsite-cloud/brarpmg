@@ -75,7 +75,7 @@ export default function AllendateUnitEProperty() {
                 id="booking-iframe" 
                 sandbox="allow-top-navigation allow-scripts allow-same-origin" 
                 style={{ width: '100%', height: '900px', border: 'none' }} 
-                src={`${process.env.NEXT_PUBLIC_HOSPITABLE_BASE_URL}/${process.env.NEXT_PUBLIC_ALLENDATE_WIDGET_ID}`}
+                src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1939010"
               />
             </div>
           </div>
