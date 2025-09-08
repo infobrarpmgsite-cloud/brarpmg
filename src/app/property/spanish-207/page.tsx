@@ -26,13 +26,13 @@ import dining1 from '@/assets/images/properties/spanish-207/Dining area/1.webp';
 import dining2 from '@/assets/images/properties/spanish-207/Dining area/2.webp';
 
 // Full bathroom images
-import bathroom1 from '@/assets/images/properties/spanish-207/Full bathroom/1.webp';
-import bathroom2 from '@/assets/images/properties/spanish-207/Full bathroom/2.webp';
+import bathroom1 from '@/assets/images/properties/spanish-207/Full Bathroom/1.webp';
+import bathroom2 from '@/assets/images/properties/spanish-207/Full Bathroom/2.webp';
 
 // Full Kitchen images
-import kitchen1 from '@/assets/images/properties/spanish-207/Full kitchen/1.webp';
-import kitchen2 from '@/assets/images/properties/spanish-207/Full kitchen/2.webp';
-import kitchen3 from '@/assets/images/properties/spanish-207/Full kitchen/3.webp';
+import kitchen1 from '@/assets/images/properties/spanish-207/Full Kitchen/1.webp';
+import kitchen2 from '@/assets/images/properties/spanish-207/Full Kitchen/2.webp';
+import kitchen3 from '@/assets/images/properties/spanish-207/Full Kitchen/3.webp';
 
 // Living room images
 import living1 from '@/assets/images/properties/spanish-207/Living room/1.webp';
