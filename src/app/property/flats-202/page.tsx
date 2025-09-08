@@ -7,73 +7,60 @@ import {
   faBed,
   faBath,
   faUsers,
-  faWifi,
   faTv,
-  faKey,
-  faSwimmingPool,
   faKitchenSet,
+  faSwimmingPool,
+  faLock,
+  faSnowflake,
 } from "@fortawesome/free-solid-svg-icons";
 
-// [Previous imports remain the same...]
 // Import property images by category
 // Bedroom images
-import bedroom1 from "@/assets/images/properties/vip-107/Bedroom/image1.webp";
-import bedroom2 from "@/assets/images/properties/vip-107/Bedroom/image2.webp";
-import bedroom3 from "@/assets/images/properties/vip-107/Bedroom/image3.webp";
-import bedroom4 from "@/assets/images/properties/vip-107/Bedroom/image4.webp";
+import bedroom1 from '@/assets/images/properties/flats-202/Bedroom/1.webp';
+import bedroom2 from '@/assets/images/properties/flats-202/Bedroom/2.webp';
+import bedroom3 from '@/assets/images/properties/flats-202/Bedroom/3.webp';
 
 // Dining area images
-import dining1 from "@/assets/images/properties/vip-107/Dining area/image1.webp";
+import dining1 from '@/assets/images/properties/flats-202/Dining area/1.webp';
+import dining2 from '@/assets/images/properties/flats-202/Dining area/2.webp';
 
 // Full bathroom images
-import bathroom1 from "@/assets/images/properties/vip-107/Full bathroom/image1.webp";
-import bathroom2 from "@/assets/images/properties/vip-107/Full bathroom/image2.webp";
+import bathroom1 from '@/assets/images/properties/flats-202/Full bathroom/1.webp';
 
 // Full Kitchen images
-import kitchen1 from "@/assets/images/properties/vip-107/Full Kitchen/image1.webp";
-import kitchen2 from "@/assets/images/properties/vip-107/Full Kitchen/image2.webp";
-import kitchen3 from "@/assets/images/properties/vip-107/Full Kitchen/image3.webp";
+import kitchen1 from '@/assets/images/properties/flats-202/Full kitchen/1.webp';
+import kitchen2 from '@/assets/images/properties/flats-202/Full kitchen/2.webp';
+import kitchen3 from '@/assets/images/properties/flats-202/Full kitchen/3.webp';
 
 // Living room images
-import living1 from "@/assets/images/properties/vip-107/Living room/image1.webp";
-import living2 from "@/assets/images/properties/vip-107/Living room/image2.webp";
-import living3 from "@/assets/images/properties/vip-107/Living room/image3.webp";
-import living4 from "@/assets/images/properties/vip-107/Living room/image4.webp";
-import living5 from "@/assets/images/properties/vip-107/Living room/image5.webp";
-import living6 from "@/assets/images/properties/vip-107/Living room/image6.webp";
+import living1 from '@/assets/images/properties/flats-202/Living room/1.webp';
+import living2 from '@/assets/images/properties/flats-202/Living room/2.webp';
+import living3 from '@/assets/images/properties/flats-202/Living room/3.webp';
 
-// Pool images
-import pool1 from "@/assets/images/properties/vip-107/Pool/image1.webp";
-import pool2 from "@/assets/images/properties/vip-107/Pool/image2.webp";
-
-const vip107ImageCategories = [
-  {
-    name: "Bedroom",
-    images: [bedroom1, bedroom2, bedroom3, bedroom4],
-  },
+const flats202ImageCategories = [
   {
     name: "Living Room",
-    images: [living1, living2, living3, living4, living5, living6],
+    images: [living1, living2, living3]
   },
   {
-    name: "Full Kitchen",
-    images: [kitchen1, kitchen2, kitchen3],
+    name: "Bedroom",
+    images: [bedroom1, bedroom2, bedroom3]
   },
   {
-    name: "Full Bathroom",
-    images: [bathroom1, bathroom2],
-  },
-  {
-    name: "Pool",
-    images: [pool1, pool2],
+    name: "Kitchen",
+    images: [kitchen1, kitchen2, kitchen3]
   },
   {
     name: "Dining Area",
-    images: [dining1],
+    images: [dining1, dining2]
   },
+  {
+    name: "Bathroom",
+    images: [bathroom1]
+  }
 ];
 
-export default function Vip107Property() {
+export default function Flats202Property() {
   useEffect(() => {
     function getQueryParams(param: string) {
       const urlSearchParams = new URLSearchParams(window.location.search);
@@ -108,56 +95,55 @@ export default function Vip107Property() {
       <div className="bg-white rounded-lg shadow-sm">
         <div className="flex justify-center items-center h-20">
           <h1 className="text-4xl font-bold text-gray-900 mt-5 font-display tracking-tight">
-            Cozy & Central ~ UT/Moody ~ Pool ~ Parking ~ WiFi
+          Emerald Cozy Retreat - Austin, Texas
           </h1>
         </div>
         <div className="flex justify-center items-center">
           <div className="flex space-x-6 text-xl text-gray-600">
             <span className="flex items-center">
-              <FontAwesomeIcon icon={faBed} className="mr-2" /> 4 Bed
+              <FontAwesomeIcon icon={faBed} className="mr-2" /> 1 Bed
             </span>
             <span className="flex items-center">
-              <FontAwesomeIcon icon={faBath} className="mr-2" /> 2 Bath
+              <FontAwesomeIcon icon={faBath} className="mr-2" /> 1 Bath
             </span>
             <span className="flex items-center">
               <FontAwesomeIcon icon={faUsers} className="mr-2" /> Up to 6 Guests
             </span>
           </div>
         </div>
-        <div className="lg:col-span-7 ">
+        <div className="lg:col-span-7">
           <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
           <CategorizedImageGallery
-            categories={vip107ImageCategories}
-            propertyName="VIP-107"
+            categories={flats202ImageCategories}
+            propertyName="Flats 202"
           />
           <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
         </div>
-        <div >
+        <div>
           <div className="w-full max-w-7xl mx-auto px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
               {/* Main Content - 70% on large screens */}
               <div className="lg:col-span-7 space-y-8">
-                {/* Your Property Section */}
+                {/* Welcome Section */}
                 <div className="bg-white/50 rounded-lg shadow-lg p-6">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    🏡 Welcome to Your Chic Central Austin Retreat
+                    🏡 Welcome to the Cozy Emerald Hideaway
                   </h2>
                   <p className="text-gray-600 mb-6">
-                    Step into a bright 1BR/1BA sanctuary where modern style
-                    meets cozy charm—ideal for relaxing, working, or exploring.
+                    Your stylish retreat in the vibrant heart of South Congress. This modern 1BD/1BA condo perfectly balances charm and comfort for weekend getaways or extended visits.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faTv} className="mr-2" />
-                        Living Room
+                        Living Space
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Sofa bed for extra sleeping space</li>
-                        <li>• Ergonomic workspace</li>
-                        <li>• 65&quot; Smart TV with Roku</li>
-                        <li>• Lounge chairs & soft lighting</li>
+                        <li>• Queen futon sofa (sleeps 2)</li>
+                        <li>• Futon bunk bed (sleeps 4)</li>
+                        <li>• 50&quot; 4K Roku Smart TV</li>
+                        <li>• Elegant coffee table with emerald accents</li>
                       </ul>
                     </div>
                     <div>
@@ -166,10 +152,10 @@ export default function Vip107Property() {
                         Kitchen & Dining
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Fully equipped with modern appliances</li>
-                        <li>• Keurig & drip coffee makers</li>
-                        <li>• Full fridge/freezer & deep sink</li>
-                        <li>• Dining table for 4 + island seating</li>
+                        <li>• Full-size modern appliances</li>
+                        <li>• Coffee maker & toaster</li>
+                        <li>• Complete cookware & utensils</li>
+                        <li>• Deep sink with hot/cold water</li>
                       </ul>
                     </div>
                   </div>
@@ -183,41 +169,38 @@ export default function Vip107Property() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faKey} className="mr-2" />
-                        In-Unit Essentials
+                        <FontAwesomeIcon icon={faLock} className="mr-2" />
+                        In-Unit Features
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>• Smart Lock Entry</li>
                         <li>• High-Speed Wi-Fi</li>
-                        <li>• AC & Heating</li>
-                        <li>• Iron & Board</li>
+                        <li>• Work Desk Setup</li>
+                        <li>• Premium Bedding</li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon
-                          icon={faSwimmingPool}
-                          className="mr-2"
-                        />
-                        Outdoor & Shared
+                        <FontAwesomeIcon icon={faSwimmingPool} className="mr-2" />
+                        Building Amenities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Sparkling Outdoor Pool</li>
-                        <li>• On-Site Paid Laundry</li>
+                        <li>• Sparkling Pool</li>
                         <li>• Free Parking</li>
-                        <li>• BBQ grill (shared)</li>
+                        <li>• On-Site Laundry</li>
+                        <li>• Secure Building</li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faWifi} className="mr-2" />
-                        Entertainment
+                        <FontAwesomeIcon icon={faSnowflake} className="mr-2" />
+                        Comfort & Climate
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Smart TVs in all rooms</li>
-                        <li>• Streaming services</li>
-                        <li>• Board games</li>
-                        <li>• High-speed internet</li>
+                        <li>• Central AC/Heat</li>
+                        <li>• Ceiling Fans</li>
+                        <li>• Blackout Curtains</li>
+                        <li>• Iron & Board</li>
                       </ul>
                     </div>
                   </div>
@@ -234,8 +217,8 @@ export default function Vip107Property() {
                         🐾 Pet Policy
                       </h3>
                       <p className="text-gray-600">
-                        House-trained pets welcome! Fees: $25/night | $100/week
-                        | $300/month (Max 2 pets)
+                        Well-behaved, house-trained pets welcome! Fees: $25/night | $100/week
+                        | $300/month (Max 2 pets per stay)
                       </p>
                     </div>
                     <div className="p-4 bg-green-50 rounded-lg">
@@ -243,8 +226,8 @@ export default function Vip107Property() {
                         🧼 Cleaning Standards
                       </h3>
                       <p className="text-gray-600">
-                        Every unit is professionally cleaned and sanitized to
-                        the highest standards.
+                        Each unit is thoroughly cleaned and sanitized to ensure a fresh,
+                        welcoming environment for every guest.
                       </p>
                     </div>
                     <div className="p-4 bg-red-50 rounded-lg">
@@ -252,8 +235,8 @@ export default function Vip107Property() {
                         ⚠️ House Rules
                       </h3>
                       <p className="text-gray-600">
-                        No smoking indoors. No parties or events. Unauthorized
-                        gatherings may result in immediate cancellation.
+                        No smoking indoors. No parties or events. Unauthorized gatherings
+                        may result in cancellation without refund.
                       </p>
                     </div>
                   </div>
@@ -266,7 +249,7 @@ export default function Vip107Property() {
                   id="booking-iframe"
                   sandbox="allow-top-navigation allow-scripts allow-same-origin"
                   style={{ width: "100%", height: "900px", border: "none" }}
-                  src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1581300"
+                  src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1871066"
                 />
               </div>
             </div>

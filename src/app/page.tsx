@@ -19,7 +19,7 @@ export default function Home() {
         </h2>
         <Script src="https://hospitable.b-cdn.net/direct-property-search-widget/hospitable-search-widget.prod.js" />
         <div dangerouslySetInnerHTML={{
-          __html: '<hospitable-direct-mps identifier="47ea57e8-c278-4bae-bda6-6197f2e06932" type="custom" results-url="/search"></hospitable-direct-mps>'
+          __html: '<hospitable-direct-mps identifier="47ea57e8-c278-4bae-bda6-6197f2e06932" type="custom" results-url="/brarpmg/search"></hospitable-direct-mps>'
         }} />
       </div>
     </div>
