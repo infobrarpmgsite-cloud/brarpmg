@@ -102,15 +102,17 @@ export default function AllendaleUnitEProperty() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-sm">
-        <div className="flex justify-center items-center h-20">
-          <h1 className="text-4xl font-bold text-gray-900 mt-5 font-display tracking-tight">
-          Stylish & Comfy Loft near Q2 Stadium in North AX
+    <div className="container mx-auto px-2 py-6">
+      <div className="bg-[#efefef] rounded-xl">
+        <div className="lg:col-span-7 px-6 py-6">
+          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+          <div className="flex flex-col justify-center items-center h-auto py-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight text-center px-4">
+            Stylish & Comfy Loft near Q2 Stadium in North AX
           </h1>
         </div>
         <div className="flex justify-center items-center">
-          <div className="flex space-x-6 text-xl text-gray-600">
+          <div className="flex flex-wrap justify-center gap-4 md:space-x-6 text-lg md:text-xl text-gray-600 px-4">
             <span className="flex items-center">
               <FontAwesomeIcon icon={faBed} className="mr-2" /> 1 Bed
             </span>
@@ -122,31 +124,35 @@ export default function AllendaleUnitEProperty() {
             </span>
           </div>
         </div>
-        <div className="lg:col-span-7">
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          <hr className="border-[#3B5FE3] my-6 border-4 rounded-full mx-auto w-3/4 opacity-70" />
+
           <CategorizedImageGallery
             categories={allendaleUnitEImageCategories}
             propertyName="Allendale Unit E"
           />
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          </div>
+        
         </div>
         <div>
-          <div className="w-full max-w-7xl mx-auto px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
+          <div className="w-full max-w-7xl mx-auto px-4 md:px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
               {/* Main Content - 70% on large screens */}
-              <div className="lg:col-span-7 space-y-8">
+              <div className="lg:col-span-7 space-y-6 md:space-y-8">
                 {/* Welcome Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    💼 Modern Traveler&apos;s Haven
-                  </h2>
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                   💼 Modern Traveler&apos;s Haven
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <p className="text-gray-600 mb-6">
                     Welcome to your remote-work-ready studio in vibrant North Austin—designed for business travelers who value productivity, comfort, and convenience.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faLaptop} className="mr-2" />
                         Work & Relax
                       </h3>
@@ -158,7 +164,7 @@ export default function AllendaleUnitEProperty() {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faCar} className="mr-2" />
                         Prime Location
                       </h3>
@@ -173,11 +179,14 @@ export default function AllendaleUnitEProperty() {
                 </div>
 
                 {/* Amenities Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
                     Studio Features
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faKey} className="mr-2" />
@@ -202,7 +211,7 @@ export default function AllendaleUnitEProperty() {
                         <li>• In-unit dryer</li>
                       </ul>
                     </div>
-                    <div>
+                    <div className="sm:col-span-2 md:col-span-1">
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faLock} className="mr-2" />
                         Added Conveniences
@@ -218,10 +227,13 @@ export default function AllendaleUnitEProperty() {
                 </div>
 
                 {/* Important Notes Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6 mb-5">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-5">
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
                     Important Details
-                  </h2>
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <div className="space-y-4">
                     <div className="p-4 bg-blue-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
@@ -257,13 +269,15 @@ export default function AllendaleUnitEProperty() {
               </div>
 
               {/* Booking Iframe - 30% on large screens */}
-              <div className="lg:col-span-3">
-                <iframe
-                  id="booking-iframe"
-                  sandbox="allow-top-navigation allow-scripts allow-same-origin"
-                  style={{ width: "100%", height: "900px", border: "none" }}
-                  src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1939010"
-                />
+              <div className="lg:col-span-3 flex justify-center">
+                <div className="w-full">
+                   <iframe
+                    id="booking-iframe"
+                    sandbox="allow-top-navigation allow-scripts allow-same-origin"
+                    style={{ width: "100%", height: "550px", border: "none" }}
+                    src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1939010"
+                  />
+                </div>
               </div>
             </div>
           </div>

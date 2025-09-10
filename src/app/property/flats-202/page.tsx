@@ -7,11 +7,12 @@ import {
   faBed,
   faBath,
   faUsers,
-  faTv,
+  faLaptop,
   faKitchenSet,
-  faSwimmingPool,
+  faKey,
+  faCar,
   faLock,
-  faSnowflake,
+  faClock
 } from "@fortawesome/free-solid-svg-icons";
 
 // Import property images by category
@@ -91,15 +92,17 @@ export default function Flats202Property() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-sm">
-        <div className="flex justify-center items-center h-20">
-          <h1 className="text-4xl font-bold text-gray-900 mt-5 font-display tracking-tight">
-          Emerald Cozy Retreat - Austin, Texas
+    <div className="container mx-auto px-2 py-6">
+      <div className="bg-[#efefef] rounded-xl">
+        <div className="lg:col-span-7 px-6 py-6">
+          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+          <div className="flex flex-col justify-center items-center h-auto py-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight text-center px-4">
+            Emerald Cozy Retreat - Austin, Texas
           </h1>
         </div>
         <div className="flex justify-center items-center">
-          <div className="flex space-x-6 text-xl text-gray-600">
+          <div className="flex flex-wrap justify-center gap-4 md:space-x-6 text-lg md:text-xl text-gray-600 px-4">
             <span className="flex items-center">
               <FontAwesomeIcon icon={faBed} className="mr-2" /> 1 Bed
             </span>
@@ -111,108 +114,130 @@ export default function Flats202Property() {
             </span>
           </div>
         </div>
-        <div className="lg:col-span-7">
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          <hr className="border-[#3B5FE3] my-6 border-4 rounded-full mx-auto w-3/4 opacity-70" />
+
           <CategorizedImageGallery
             categories={flats202ImageCategories}
             propertyName="Flats 202"
           />
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          </div>
+        
         </div>
         <div>
           <div className="w-full max-w-7xl mx-auto px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
               {/* Main Content - 70% on large screens */}
-              <div className="lg:col-span-7 space-y-8">
+              <div className="lg:col-span-7 space-y-6 md:space-y-8">
                 {/* Welcome Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    🏡 Welcome to the Cozy Emerald Hideaway
-                  </h2>
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                 
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    💼 Modern Traveler&apos;s Haven
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <p className="text-gray-600 mb-6">
                     Your stylish retreat in the vibrant heart of South Congress. This modern 1BD/1BA condo perfectly balances charm and comfort for weekend getaways or extended visits.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <FontAwesomeIcon icon={faTv} className="mr-2" />
-                        Living Space
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <FontAwesomeIcon icon={faLaptop} className="mr-2" />
+                        Work & Relax
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Queen futon sofa (sleeps 2)</li>
-                        <li>• Futon bunk bed (sleeps 4)</li>
-                        <li>• 50&quot; 4K Roku Smart TV</li>
-                        <li>• Elegant coffee table with emerald accents</li>
+                        <li>• Dedicated workspace</li>
+                        <li>• Lightning-fast Wi-Fi</li>
+                        <li>• Cozy living area</li>
+                        <li>• Smart TV entertainment</li>
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <FontAwesomeIcon icon={faKitchenSet} className="mr-2" />
-                        Kitchen & Dining
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <FontAwesomeIcon icon={faCar} className="mr-2" />
+                        Prime Location
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Full-size modern appliances</li>
-                        <li>• Coffee maker & toaster</li>
-                        <li>• Complete cookware & utensils</li>
-                        <li>• Deep sink with hot/cold water</li>
+                        <li>• 5 min to South Congress</li>
+                        <li>• 10 min to Downtown</li>
+                        <li>• 15 min to Airport</li>
+                        <li>• Walking distance to shops</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                {/* Guest Access Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    Essential Amenities
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Amenities Section */}
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                  
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    Property Features
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div>
+                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faKey} className="mr-2" />
+                        Essential Comforts
+                      </h3>
+                      <ul className="space-y-2 text-gray-600">
+                        <li>• Queen futon sofa (sleeps 2)</li>
+                        <li>• Futon bunk bed (sleeps 4)</li>
+                        <li>• Air conditioning</li>
+                        <li>• Dining for 6</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faKitchenSet} className="mr-2" />
+                        Kitchen & Dining
+                      </h3>
+                      <ul className="space-y-2 text-gray-600">
+                        <li>• Full kitchen setup</li>
+                        <li>• Coffee essentials</li>
+                        <li>• Modern appliances</li>
+                        <li>• Complete cookware</li>
+                      </ul>
+                    </div>
+                    <div className="sm:col-span-2 md:col-span-1">
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faLock} className="mr-2" />
-                        In-Unit Features
+                        Added Conveniences
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Smart Lock Entry</li>
-                        <li>• High-Speed Wi-Fi</li>
-                        <li>• Work Desk Setup</li>
-                        <li>• Premium Bedding</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faSwimmingPool} className="mr-2" />
-                        Building Amenities
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>• Sparkling Pool</li>
-                        <li>• Free Parking</li>
-                        <li>• On-Site Laundry</li>
-                        <li>• Secure Building</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faSnowflake} className="mr-2" />
-                        Comfort & Climate
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>• Central AC/Heat</li>
-                        <li>• Ceiling Fans</li>
-                        <li>• Blackout Curtains</li>
-                        <li>• Iron & Board</li>
+                        <li>• Free parking</li>
+                        <li>• Sparkling pool</li>
+                        <li>• Smart entry</li>
+                        <li>• 24/7 surveillance</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
                 {/* Important Notes Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6 mb-5">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    Important Details to Note
-                  </h2>
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-5">
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    Important Details
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <div className="space-y-4">
                     <div className="p-4 bg-blue-50 rounded-lg">
+                      <h3 className="text-lg font-medium text-gray-800 mb-2">
+                        <FontAwesomeIcon icon={faClock} className="mr-2" />
+                        Quiet Hours & Check-in
+                      </h3>
+                      <p className="text-gray-600">
+                        Quiet hours: 10:00 PM – 7:00 AM. Early check-in/late check-out
+                        available upon request (additional fee applies).
+                      </p>
+                    </div>
+                    <div className="p-4 bg-green-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
                         🐾 Pet Policy
                       </h3>
@@ -221,22 +246,14 @@ export default function Flats202Property() {
                         | $300/month (Max 2 pets per stay)
                       </p>
                     </div>
-                    <div className="p-4 bg-green-50 rounded-lg">
-                      <h3 className="text-lg font-medium text-gray-800 mb-2">
-                        🧼 Cleaning Standards
-                      </h3>
-                      <p className="text-gray-600">
-                        Each unit is thoroughly cleaned and sanitized to ensure a fresh,
-                        welcoming environment for every guest.
-                      </p>
-                    </div>
                     <div className="p-4 bg-red-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
                         ⚠️ House Rules
                       </h3>
                       <p className="text-gray-600">
-                        No smoking indoors. No parties or events. Unauthorized gatherings
-                        may result in cancellation without refund.
+                        No parties or events. This home is intended for families and
+                        business travelers. Unauthorized gatherings will result in
+                        immediate cancellation.
                       </p>
                     </div>
                   </div>
@@ -244,13 +261,15 @@ export default function Flats202Property() {
               </div>
 
               {/* Booking Iframe - 30% on large screens */}
-              <div className="lg:col-span-3">
-                <iframe
-                  id="booking-iframe"
-                  sandbox="allow-top-navigation allow-scripts allow-same-origin"
-                  style={{ width: "100%", height: "900px", border: "none" }}
-                  src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1871066"
-                />
+              <div className="lg:col-span-3 flex justify-center">
+                <div className="w-full">
+                   <iframe
+                    id="booking-iframe"
+                    sandbox="allow-top-navigation allow-scripts allow-same-origin"
+                    style={{ width: "100%", height: "550px", border: "none" }}
+                    src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1871066"
+                  />
+                </div>
               </div>
             </div>
           </div>
