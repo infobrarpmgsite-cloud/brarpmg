@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <Navigation />
-        <main style={{ backgroundColor: "#efefef" }}>{children}</main>
+        <main style={{ backgroundColor: "#4F4F4F" }}>{children}</main>
         <Footer />
       </body>
     </html>

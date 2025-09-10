@@ -7,12 +7,12 @@ import {
   faBed,
   faBath,
   faUsers,
-  faTv,
-  faSwimmingPool,
+  faLaptop,
   faKitchenSet,
   faKey,
-  faGamepad,
-  faHouse,
+  faCar,
+  faLock,
+  faClock
 } from "@fortawesome/free-solid-svg-icons";
 
 // Import property images by category
@@ -94,15 +94,17 @@ export default function Spanish207Property() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-sm">
-        <div className="flex justify-center items-center h-20">
-          <h1 className="text-4xl font-bold text-gray-900 mt-5 font-display tracking-tight">
-          Stylish & Central /Perfect for F1 +Wi-Fi & Parking
+    <div className="container mx-auto px-2 py-6">
+      <div className="bg-[#efefef] rounded-xl">
+        <div className="lg:col-span-7 px-6 py-6">
+          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+          <div className="flex flex-col justify-center items-center h-auto py-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight text-center px-4">
+            Stylish & Central /Perfect for F1 +Wi-Fi & Parking
           </h1>
         </div>
         <div className="flex justify-center items-center">
-          <div className="flex space-x-6 text-xl text-gray-600">
+          <div className="flex flex-wrap justify-center gap-4 md:space-x-6 text-lg md:text-xl text-gray-600 px-4">
             <span className="flex items-center">
               <FontAwesomeIcon icon={faBed} className="mr-2" /> 3 Bed
             </span>
@@ -114,141 +116,129 @@ export default function Spanish207Property() {
             </span>
           </div>
         </div>
-        <div className="lg:col-span-7">
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          <hr className="border-[#3B5FE3] my-6 border-4 rounded-full mx-auto w-3/4 opacity-70" />
+
           <CategorizedImageGallery
             categories={spanish207ImageCategories}
             propertyName="Spanish 207"
           />
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          </div>
+        
         </div>
         <div>
           <div className="w-full max-w-7xl mx-auto px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
               {/* Main Content - 70% on large screens */}
-              <div className="lg:col-span-7 space-y-8">
+              <div className="lg:col-span-7 space-y-6 md:space-y-8">
                 {/* Welcome Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    🏡 Welcome to Hyde Park Haven
-                  </h2>
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                      💼 Modern Traveler&apos;s Haven
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <p className="text-gray-600 mb-6">
-                    Experience relaxed, contemporary living in the heart of Hyde Park—one of Austin&lsquo;s most walkable and picturesque areas. This bright 1BR/1BA haven is ideal for couples, solo travelers, or small families.
+                    Experience relaxed, contemporary living in the heart of Hyde Park—one of Austin&apos;s most walkable and picturesque areas. This bright 3BR/1BA haven is ideal for families, groups, or business travelers.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <FontAwesomeIcon icon={faTv} className="mr-2" />
-                        Living Space
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <FontAwesomeIcon icon={faLaptop} className="mr-2" />
+                        Work & Relax
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Convertible sofa bed</li>
-                        <li>• Full-size extra bed</li>
-                        <li>• 55&quot; Roku Smart TV</li>
                         <li>• Dedicated workspace</li>
+                        <li>• Lightning-fast Wi-Fi</li>
+                        <li>• Cozy living area</li>
+                        <li>• Smart TV entertainment</li>
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <FontAwesomeIcon icon={faKitchenSet} className="mr-2" />
-                        Kitchen & Dining
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <FontAwesomeIcon icon={faCar} className="mr-2" />
+                        Prime Location
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Full appliance suite</li>
-                        <li>• Multiple coffee options</li>
-                        <li>• Air fryer & bread maker</li>
-                        <li>• Dining for 6 total</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Sleeping & Comfort Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    Sleeping & Comfort
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faBed} className="mr-2" />
-                        Bedroom Suite
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>• King-size bed</li>
-                        <li>• 55&quot; Roku Smart TV</li>
-                        <li>• Premium linens</li>
-                        <li>• Spacious closets</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faHouse} className="mr-2" />
-                        Bathroom
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>• Tub/shower combo</li>
-                        <li>• Modern vanity</li>
-                        <li>• Fresh towels</li>
-                        <li>• Hair dryer</li>
+                        <li>• 5 min to UT Campus</li>
+                        <li>• 10 min to Downtown</li>
+                        <li>• 15 min to Airport</li>
+                        <li>• Perfect for F1 events</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
                 {/* Amenities Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    Property Amenities
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    Property Features
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
+                
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faKey} className="mr-2" />
-                        Essential Features
+                        Essential Comforts
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Smart Lock Entry</li>
-                        <li>• Ultra-fast WiFi</li>
-                        <li>• Climate Control</li>
-                        <li>• Travel Crib</li>
+                        <li>• 3 comfortable bedrooms</li>
+                        <li>• Modern bathroom</li>
+                        <li>• Air conditioning</li>
+                        <li>• Dining for 6</li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faSwimmingPool} className="mr-2" />
-                        Outdoor Access
+                        <FontAwesomeIcon icon={faKitchenSet} className="mr-2" />
+                        Kitchen & Dining
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Sparkling Pool</li>
-                        <li>• BBQ Area</li>
-                        <li>• Outdoor Lounge</li>
-                        <li>• Free Parking</li>
+                        <li>• Full kitchen setup</li>
+                        <li>• Coffee essentials</li>
+                        <li>• Modern appliances</li>
+                        <li>• Dining for 6 total</li>
                       </ul>
                     </div>
-                    <div>
+                    <div className="sm:col-span-2 md:col-span-1">
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faGamepad} className="mr-2" />
-                        Entertainment
+                        <FontAwesomeIcon icon={faLock} className="mr-2" />
+                        Added Conveniences
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Smart TVs</li>
-                        <li>• Board Games</li>
-                        <li>• Streaming Apps</li>
-                        <li>• Fast Internet</li>
+                        <li>• Free parking</li>
+                        <li>• Secure building</li>
+                        <li>• Smart entry</li>
+                        <li>• 24/7 surveillance</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
                 {/* Important Notes Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6 mb-5">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-5">
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
                     Important Details
-                  </h2>
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <div className="space-y-4">
                     <div className="p-4 bg-blue-50 rounded-lg">
+                      <h3 className="text-lg font-medium text-gray-800 mb-2">
+                        <FontAwesomeIcon icon={faClock} className="mr-2" />
+                        Quiet Hours & Check-in
+                      </h3>
+                      <p className="text-gray-600">
+                        Quiet hours: 10:00 PM – 7:00 AM. Early check-in/late check-out
+                        available upon request (additional fee applies).
+                      </p>
+                    </div>
+                    <div className="p-4 bg-green-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
                         🐾 Pet Policy
                       </h3>
@@ -257,22 +247,14 @@ export default function Spanish207Property() {
                         | $300/month (Max 2 pets per stay)
                       </p>
                     </div>
-                    <div className="p-4 bg-green-50 rounded-lg">
-                      <h3 className="text-lg font-medium text-gray-800 mb-2">
-                        🧼 Cleaning Standards
-                      </h3>
-                      <p className="text-gray-600">
-                        Your comfort and safety are top priority. Each unit is meticulously 
-                        cleaned and sanitized to ensure a pristine, welcoming environment.
-                      </p>
-                    </div>
                     <div className="p-4 bg-red-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
                         ⚠️ House Rules
                       </h3>
                       <p className="text-gray-600">
-                        No smoking indoors. No parties or events. Help us maintain a 
-                        peaceful and respectful atmosphere for everyone.
+                        No parties or events. This home is intended for families and
+                        business travelers. Unauthorized gatherings will result in
+                        immediate cancellation.
                       </p>
                     </div>
                   </div>
@@ -280,13 +262,15 @@ export default function Spanish207Property() {
               </div>
 
               {/* Booking Iframe - 30% on large screens */}
-              <div className="lg:col-span-3">
-                <iframe
-                  id="booking-iframe"
-                  sandbox="allow-top-navigation allow-scripts allow-same-origin"
-                  style={{ width: "100%", height: "900px", border: "none" }}
-                  src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1604860"
-                />
+              <div className="lg:col-span-3 flex justify-center">
+                <div className="w-full">
+                   <iframe
+                    id="booking-iframe"
+                    sandbox="allow-top-navigation allow-scripts allow-same-origin"
+                    style={{ width: "100%", height: "550px", border: "none" }}
+                    src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1604860"
+                  />
+                </div>
               </div>
             </div>
           </div>

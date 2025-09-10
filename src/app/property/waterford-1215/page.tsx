@@ -11,8 +11,8 @@ import {
   faLaptop,
   faCar,
   faLock,
-  faDumbbell,
   faClock,
+  faKey,
 } from "@fortawesome/free-solid-svg-icons";
 
 // Import property images by category
@@ -172,15 +172,17 @@ export default function Waterford1215Property() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-sm">
-        <div className="flex justify-center items-center h-20">
-          <h1 className="text-4xl font-bold text-gray-900 mt-5 font-display tracking-tight">
-          The Domain Spot | Chic & Central in North ATX
+    <div className="container mx-auto px-2 py-6">
+      <div className="bg-[#efefef] rounded-xl">
+        <div className="lg:col-span-7 px-6 py-6">
+          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+          <div className="flex flex-col justify-center items-center h-auto py-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight text-center px-4">
+            The Domain Spot | Chic & Central in North ATX
           </h1>
         </div>
         <div className="flex justify-center items-center">
-          <div className="flex space-x-6 text-xl text-gray-600">
+          <div className="flex flex-wrap justify-center gap-4 md:space-x-6 text-lg md:text-xl text-gray-600 px-4">
             <span className="flex items-center">
               <FontAwesomeIcon icon={faBed} className="mr-2" /> 2 Bed
             </span>
@@ -192,43 +194,48 @@ export default function Waterford1215Property() {
             </span>
           </div>
         </div>
-        <div className="lg:col-span-7">
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          <hr className="border-[#3B5FE3] my-6 border-4 rounded-full mx-auto w-3/4 opacity-70" />
+
           <CategorizedImageGallery
             categories={waterford1215ImageCategories}
             propertyName="Waterford 1215"
           />
-          <hr className="border-gray-300 my-6 border-2 rounded-full mx-auto w-3/4" />
+          </div>
+        
         </div>
         <div>
           <div className="w-full max-w-7xl mx-auto px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
               {/* Main Content - 70% on large screens */}
-              <div className="lg:col-span-7 space-y-8">
+              <div className="lg:col-span-7 space-y-6 md:space-y-8">
                 {/* Welcome Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    💼 Welcome to Your Business Haven
-                  </h2>
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                  
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    💼 Modern Traveler&apos;s Haven
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <p className="text-gray-600 mb-6">
-                    Step into your ideal home office away from home! This sleek 2BR/2.5BA at Presidium Waterford blends efficiency, comfort, and convenience for an effortless stay.
+                    Step into your ideal home office away from home! This sleek 2BR/1.5BA at Presidium Waterford blends efficiency, comfort, and convenience for an effortless stay.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faLaptop} className="mr-2" />
-                        Work & Comfort
+                        Work & Relax
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Ergonomic built-in desk</li>
-                        <li>• Ultra-fast Wi-Fi</li>
-                        <li>• Queen beds with blackout curtains</li>
-                        <li>• Walk-in closet storage</li>
+                        <li>• Dedicated workspace</li>
+                        <li>• Lightning-fast Wi-Fi</li>
+                        <li>• Cozy living area</li>
+                        <li>• Smart TV entertainment</li>
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faCar} className="mr-2" />
                         Prime Location
                       </h3>
@@ -243,44 +250,48 @@ export default function Waterford1215Property() {
                 </div>
 
                 {/* Amenities Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    Premium Features
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                 
+                  <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    Property Features
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faKey} className="mr-2" />
+                        Essential Comforts
+                      </h3>
+                      <ul className="space-y-2 text-gray-600">
+                        <li>• 2 comfortable bedrooms</li>
+                        <li>• 1.5 modern bathrooms</li>
+                        <li>• Air conditioning</li>
+                        <li>• Dining for 5</li>
+                      </ul>
+                    </div>
                     <div>
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faKitchenSet} className="mr-2" />
-                        Kitchen & Living
+                        Kitchen & Dining
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• Modern kitchen suite</li>
+                        <li>• Full kitchen setup</li>
+                        <li>• Coffee essentials</li>
+                        <li>• Modern appliances</li>
                         <li>• Breakfast bar</li>
-                        <li>• Coffee & tea station</li>
-                        <li>• Cozy living space</li>
                       </ul>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faDumbbell} className="mr-2" />
-                        Community Access
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>• Resort-style pool</li>
-                        <li>• Modern fitness center</li>
-                        <li>• Stylish lounges</li>
-                        <li>• Meeting spaces</li>
-                      </ul>
-                    </div>
-                    <div>
+                    <div className="sm:col-span-2 md:col-span-1">
                       <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faLock} className="mr-2" />
-                        Added Comforts
+                        Added Conveniences
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>• In-unit laundry</li>
                         <li>• Free parking</li>
-                        <li>• Secure building</li>
+                        <li>• Resort-style pool</li>
+                        <li>• Fitness center</li>
                         <li>• 24/7 surveillance</li>
                       </ul>
                     </div>
@@ -288,15 +299,18 @@ export default function Waterford1215Property() {
                 </div>
 
                 {/* Important Notes Section */}
-                <div className="bg-white/50 rounded-lg shadow-lg p-6 mb-5">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-display tracking-tight">
-                    Essential Information
-                  </h2>
+                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-5">
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    Important Details
+                    </h2>
+                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                  </div>
                   <div className="space-y-4">
                     <div className="p-4 bg-blue-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
                         <FontAwesomeIcon icon={faClock} className="mr-2" />
-                        Hours & Access
+                        Quiet Hours & Check-in
                       </h3>
                       <p className="text-gray-600">
                         Quiet hours: 10:00 PM – 7:00 AM. Early check-in/late check-out
@@ -305,20 +319,21 @@ export default function Waterford1215Property() {
                     </div>
                     <div className="p-4 bg-green-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
-                        🧼 Cleaning Service
+                        🐾 Pet Policy
                       </h3>
                       <p className="text-gray-600">
-                        Professionally sanitized before arrival. Optional mid-stay cleaning
-                        available for stays over 7 nights (additional fee).
+                        Well-behaved, house-trained pets welcome! Fees: $25/night | $100/week
+                        | $300/month (Max 2 pets per stay)
                       </p>
                     </div>
                     <div className="p-4 bg-red-50 rounded-lg">
                       <h3 className="text-lg font-medium text-gray-800 mb-2">
-                        ⚠️ Important Policies
+                        ⚠️ House Rules
                       </h3>
                       <p className="text-gray-600">
-                        No pets allowed ($500 fee for violations). No parties or events.
-                        This home is for respectful guests only.
+                        No parties or events. This home is intended for families and
+                        business travelers. Unauthorized gatherings will result in
+                        immediate cancellation.
                       </p>
                     </div>
                   </div>
@@ -326,13 +341,15 @@ export default function Waterford1215Property() {
               </div>
 
               {/* Booking Iframe - 30% on large screens */}
-              <div className="lg:col-span-3">
-                <iframe
-                  id="booking-iframe"
-                  sandbox="allow-top-navigation allow-scripts allow-same-origin"
-                  style={{ width: "100%", height: "900px", border: "none" }}
-                  src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1934150"
-                />
+              <div className="lg:col-span-3 flex justify-center">
+                <div className="w-full">
+                   <iframe
+                    id="booking-iframe"
+                    sandbox="allow-top-navigation allow-scripts allow-same-origin"
+                    style={{ width: "100%", height: "550px", border: "none" }}
+                    src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1934150"
+                  />
+                </div>
               </div>
             </div>
           </div>
