@@ -173,9 +173,9 @@ export default function Waterford1215Property() {
 
   return (
     <div className="container mx-auto px-2 py-6">
-      <div className="bg-[#efefef] rounded-xl">
+      <div className="bg-[#efefef]">
         <div className="lg:col-span-7 px-6 py-6">
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+          <div className="bg-white shadow-lg p-4 md:p-6">
           <div className="flex flex-col justify-center items-center h-auto py-6">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight text-center px-4">
             The Domain Spot | Chic & Central in North ATX

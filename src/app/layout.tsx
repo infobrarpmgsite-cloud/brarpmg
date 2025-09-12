@@ -32,6 +32,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <Navigation />
+        {/* <main style={{ background: "linear-gradient(to bottom, #efefef, #efefef, #4F4F4F)" }}>{children}</main> */}
         <main style={{ backgroundColor: "#4F4F4F" }}>{children}</main>
         <Footer />
       </body>
