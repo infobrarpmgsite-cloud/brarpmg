@@ -10,7 +10,7 @@ export default function Search() {
     <div className="container mx-auto  px-4 py-8">
       <div className="width-100% text-center bg-[#efefef] p-6" >
         <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900">
+            <h1 className="text-4xl font-extrabold font-poppins tracking-wide text-[#4F4F4F] text-stroke-black mb-2 mt-2">
             Have it say BPMG Stays
             </h1>
           </div>

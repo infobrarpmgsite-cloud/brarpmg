@@ -18,6 +18,8 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-outfit)"],
         display: ["var(--font-manrope)"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
