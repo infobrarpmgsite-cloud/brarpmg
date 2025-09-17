@@ -8,7 +8,7 @@ export default function Home() {
       <div className="p-6">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white/50 tracking-wide" style={{ fontFamily: 'Poppins, sans-serif' }}>
-          Have it say BPMG Stays
+          BPMG Stays
           </h1>
         </div>
         <Script src="https://hospitable.b-cdn.net/direct-property-search-widget/hospitable-search-widget.prod.js" />
