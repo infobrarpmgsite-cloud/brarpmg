@@ -47,24 +47,24 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-8">
+    <div className="w-full max-w-7xl mx-auto mt-8 backdrop-grayscale-50">
       {/* Carousel Container */}
-      <div className="relative w-full h-96 md:h-[500px] lg:h-[600px] rounded-2xl shadow-2xl group">
+      <div className="relative w-full h-96 md:h-[300px] lg:h-[400px] rounded-2xl shadow-2xl group">
         {/* Current Image */}
         <Image
           src={images[currentImageIndex]}
           alt={`Property showcase ${currentImageIndex + 1}`}
           fill
           className={`absolute inset-0 object-cover transition-all duration-1000 ease-in-out transform scale-105 ${
-            isTransitioning ? 'opacity-0 scale-110' : 'opacity-100 scale-105'
+            isTransitioning ? 'scale-105 blur-md' : 'opacity-100 scale-105'
           }`}
           priority
-          quality={90}
+          quality={100}
         />
+       
         
         {/* Dark overlay for content readability */}
-        <div className="absolute inset-0 bg-black/60" />
-        
+        <div className="absolute inset-0 " />
         {/* Content Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div>
