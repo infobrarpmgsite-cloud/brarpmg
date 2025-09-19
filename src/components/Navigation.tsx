@@ -16,7 +16,6 @@ const Navigation = () => {
   return (
     <nav
       style={{
-        position: "sticky",
         top: 0,
         zIndex: 1000,
         backgroundColor: "white",
@@ -24,26 +23,26 @@ const Navigation = () => {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
-        <div className="flex justify-between h-24">
+        <div className="flex justify-between h-40">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center h-full ml-10">
                   <Image
                     src="logo.png"
                     alt="BPMG STAYS"
-                    width={300}
-                    height={100}
-                    className="h-24 w-auto object-contain"
+                    width={400}
+                    height={120}
+                    className="h-28 w-auto object-contain"
                   />
                 </Link>
               </div>
             </div>
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-4 rounded-md text-lg font-medium transition-colors duration-200 ${
+                className={`lg:px-6 md:px-4 sm:px-2 py-5 rounded-md text-xl font-medium transition-colors duration-200 ${
                   pathname === item.href
                     ? "text-brand-white bg-brand-primary"
                     : "text-brand-white hover:text-brand-white hover:bg-brand-primary"
