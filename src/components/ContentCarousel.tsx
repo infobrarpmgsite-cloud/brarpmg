@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import { getAllPropertyImages } from '@/utils/propertyImages';
+import { getCarouselImages } from '@/utils/carouselImages';
 
 interface ContentCarouselProps {
   children: React.ReactNode;
@@ -11,60 +11,34 @@ interface ContentCarouselProps {
 export default function ContentCarousel({ children }: ContentCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [images] = useState(() => getAllPropertyImages());
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [images] = useState(() => getCarouselImages());
 
-  // Auto-advance carousel with random timing
-  useEffect(() => {
-    const getRandomInterval = () => Math.random() * 3000 + 4000; // 4-7 seconds
-    
-    const scheduleNext = () => {
-      intervalRef.current = setTimeout(() => {
-        setIsTransitioning(true);
-        
-        setTimeout(() => {
-          setCurrentImageIndex((prevIndex) => 
-            prevIndex === images.length - 1 ? 0 : prevIndex + 1
-          );
-          setIsTransitioning(false);
-        }, 500);
-        
-        scheduleNext();
-      }, getRandomInterval());
-    };
-
-    scheduleNext();
-    
-    return () => {
-      if (intervalRef.current) {
-        clearTimeout(intervalRef.current);
-      }
-    };
-  }, [images.length]);
+  // Manual navigation only - no auto-advance
 
   if (images.length === 0) {
     return <div className="w-full">{children}</div>;
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-8 backdrop-grayscale-50">
+    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen">
       {/* Carousel Container */}
-      <div className="relative w-full h-96 md:h-[300px] lg:h-[400px] rounded-2xl shadow-2xl group">
+      <div className="relative w-full h-full group overflow-hidden">
         {/* Current Image */}
         <Image
           src={images[currentImageIndex]}
           alt={`Property showcase ${currentImageIndex + 1}`}
           fill
-          className={`absolute inset-0 object-cover transition-all duration-1000 ease-in-out transform scale-105 ${
-            isTransitioning ? 'scale-105 blur-md' : 'opacity-100 scale-105'
+          className={`absolute inset-0 object-cover object-center transition-opacity duration-2000 ease-in-out ${
+            isTransitioning ? 'opacity-40' : 'opacity-100'
           }`}
           priority
           quality={100}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
+        
        
         
         {/* Dark overlay for content readability */}
-        <div className="absolute inset-0 " />
         {/* Content Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div>
@@ -74,11 +48,21 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
         
 
         {/* Navigation Arrows */}
-        {/* <button
-          onClick={() => setCurrentImageIndex((prev) => 
-            prev === 0 ? images.length - 1 : prev - 1
-          )}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+        {/* Left Arrow */}
+        <button
+          onClick={() => {
+            if (isTransitioning) return;
+            const nextIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+            setIsTransitioning(true);
+            setTimeout(() => {
+              setCurrentImageIndex(nextIndex);
+              setTimeout(() => {
+                setIsTransitioning(false);
+              }, 50);
+            }, 500);
+          }}
+          disabled={isTransitioning}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full opacity-70 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
           aria-label="Previous image"
         >
           <svg
@@ -95,12 +79,22 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
             />
           </svg>
         </button>
-        
+
+        {/* Right Arrow */}
         <button
-          onClick={() => setCurrentImageIndex((prev) => 
-            prev === images.length - 1 ? 0 : prev + 1
-          )}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+          onClick={() => {
+            if (isTransitioning) return;
+            const nextIndex = (currentImageIndex + 1) % images.length;
+            setIsTransitioning(true);
+            setTimeout(() => {
+              setCurrentImageIndex(nextIndex);
+              setTimeout(() => {
+                setIsTransitioning(false);
+              }, 50);
+            }, 500);
+          }}
+          disabled={isTransitioning}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full opacity-70 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
           aria-label="Next image"
         >
           <svg
@@ -116,7 +110,7 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </button> */}
+        </button>
 
         {/* Image Counter */}
         {/* <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
@@ -124,25 +118,36 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
         </div> */}
 
         {/* Progress Dots */}
-        {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-4">
           {images.slice(0, 10).map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              onClick={() => {
+                if (isTransitioning || index === currentImageIndex) return;
+                
+                setIsTransitioning(true);
+                setTimeout(() => {
+                  setCurrentImageIndex(index);
+                  setTimeout(() => {
+                    setIsTransitioning(false);
+                  }, 50);
+                }, 500);
+              }}
+              disabled={isTransitioning || index === currentImageIndex}
+              className={`w-3 h-3 sm:w-2 sm:h-2 rounded-full transition-all duration-300 touch-manipulation ${
                 currentImageIndex === index
                   ? 'bg-white scale-125'
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
+                  : 'bg-white/50 hover:bg-white/75 active:bg-white/90'
+              } disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-label={`Go to image ${index + 1}`}
             />
           ))}
           {images.length > 10 && (
-            <div className="w-2 h-2 rounded-full bg-white/30 flex items-center justify-center">
+            <div className="w-3 h-3 sm:w-2 sm:h-2 rounded-full bg-white/30 flex items-center justify-center">
               <span className="text-xs text-white">+</span>
             </div>
           )}
-        </div> */}
+        </div>
       </div>
 
       

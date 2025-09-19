@@ -7,8 +7,6 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "export": "next build && next export",
-    "deploy": "npm run build && touch out/.nojekyll",
     "convert-images": "node scripts/convert-images.js",
     "convert-to-webp": "node scripts/convert-to-webp.js"
   },
