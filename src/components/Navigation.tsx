@@ -28,7 +28,7 @@ const Navigation = () => {
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center h-full lg:ml-10">
                   <Image
-                    src="logo.png"
+                    src="./logo.png"
                     alt="BPMG STAYS"
                     width={400}
                     height={120}
