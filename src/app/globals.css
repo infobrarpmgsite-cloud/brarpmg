@@ -25,10 +25,10 @@ body {
     radial-gradient(circle at 80% 20%, rgba(79, 79, 79, 0.5) 0%, transparent 50%),
     linear-gradient(160deg,
       #3B5FE3 0%,
-      #3B5FE3 20%,
-      rgba(59, 95, 227, 0.6) 20%,
-      rgba(79, 79, 79, 0.9) 50%,
-      #4F4F4F 50%,
+      #3B5FE3 30%,
+      rgba(59, 95, 227, 0.6) 30%,
+      rgba(79, 79, 79, 0.9) 40%,
+      #4F4F4F 40%,
       #4F4F4F 100%);
   background-size: 100% 100%, 100% 100%, 100% 100%;
 }
@@ -104,6 +104,17 @@ body {
   background:
     radial-gradient(ellipse 40% 60% at 25% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
     radial-gradient(ellipse 40% 60% at 75% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Two-tone solid overlay for main page */
+.two-tone-overlay {
+  background: linear-gradient(140deg,
+      rgba(59, 95, 227, 0.5) 0%,
+      rgba(59, 95, 227, 0.5) 50%,
+      rgba(79, 79, 79, 0.5) 50%,
+      rgba(79, 79, 79, 0.5) 100%);
+  filter: grayscale(50%);
   pointer-events: none;
 }
 
