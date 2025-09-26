@@ -172,16 +172,16 @@ export default function Waterford1315Property() {
 
   return (
     <div className="container mx-auto px-2 py-6">
-      <div className="bg-[#efefef]">
-        <div className="lg:col-span-7 px-6 py-6">
-          <div className="bg-white shadow-lg p-4 md:p-6">
+      <div className="bg-white/30">
+        <div className="lg:col-span-7 px-4 py-4">
+          <div className=" p-4 md:p-6">
           <div className="flex flex-col justify-center items-center h-auto py-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight text-center px-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#1B2845] font-display tracking-tight text-center px-4">
             Relaxed 2BR Stay Near Domain & Central Aux
           </h1>
         </div>
         <div className="flex justify-center items-center">
-          <div className="flex flex-wrap justify-center gap-4 md:space-x-6 text-lg md:text-xl text-gray-600 px-4">
+          <div className="flex flex-wrap justify-center gap-4 md:space-x-6 text-lg md:text-xl text-[#1B2845]/50 px-4">
             <span className="flex items-center">
               <FontAwesomeIcon icon={faBed} className="mr-2" /> 2 Bed
             </span>
@@ -193,40 +193,42 @@ export default function Waterford1315Property() {
             </span>
           </div>
         </div>
-          <hr className="border-[#3B5FE3] my-6 border-4 rounded-full mx-auto w-3/4 opacity-70" />
+          <hr className="border-[#3B5FE3] my-6 border-4 rounded-full mx-auto w-3/4 box-shadow-xl/30" />
 
           <CategorizedImageGallery
             categories={waterford1315ImageCategories}
             propertyName="Waterford 1315"
           />
           </div>
-        
         </div>
+     
+      </div>
+      <div className="bg-white/30 mt-10">
+        <div className="lg:col-span-7">
         <div>
-          <div className="w-full max-w-7xl mx-auto px-6 py-8 bg-gradient-to-b from-gray- to-transparent rounded-xl">
+          <div className="w-full max-w-7xl mx-auto px-2 py-10 rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
               {/* Main Content - 70% on large screens */}
               <div className="lg:col-span-7 space-y-6 md:space-y-8">
                 {/* Welcome Section */}
-                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
-                    
-                  <div className="flex items-center gap-4 mb-4">
-                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                <div className="bg-[#3B5FE3] shadow-xl/30 p-4 md:p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-200 font-display tracking-tight">
                     💼 Modern Traveler&apos;s Haven
                     </h2>
-                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                    <hr className="flex-grow border-[#B4B4B4] opacity-50 border-4 rounded-full" />
                   </div>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-300 mb-6">
                     An elegant 2BR/2BA retreat near The Domain, perfectly designed for business travelers who value both productivity and comfort.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <div className="mb-4">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-300 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faLaptop} className="mr-2" />
                         Work & Relax
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
+                      <ul className="space-y-2 text-gray-300">
                         <li>• Dedicated workspace</li>
                         <li>• Lightning-fast Wi-Fi</li>
                         <li>• Cozy living area</li>
@@ -234,11 +236,11 @@ export default function Waterford1315Property() {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-300 mb-4 flex items-center">
                         <FontAwesomeIcon icon={faCar} className="mr-2" />
                         Prime Location
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
+                      <ul className="space-y-2 text-gray-300">
                         <li>• 8 min to The Domain</li>
                         <li>• 10 min to tech campuses</li>
                         <li>• 15 min to Downtown</li>
@@ -249,21 +251,20 @@ export default function Waterford1315Property() {
                 </div>
 
                 {/* Amenities Section */}
-                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
-                    
-                  <div className="flex items-center gap-4 mb-4">
-                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                <div className="bg-[#3B5FE3] shadow-xl/30 p-4 md:p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-200 font-display tracking-tight">
                     Property Features
                     </h2>
-                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                    <hr className="flex-grow border-[#B4B4B4] opacity-50 border-4 rounded-full" />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                      <h3 className="text-lg font-medium text-gray-300 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faKey} className="mr-2" />
                         Essential Comforts
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
+                      <ul className="space-y-2 text-gray-300">
                         <li>• 2 comfortable bedrooms</li>
                         <li>• 2 modern bathrooms</li>
                         <li>• Air conditioning</li>
@@ -271,11 +272,11 @@ export default function Waterford1315Property() {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                      <h3 className="text-lg font-medium text-gray-300 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faBuilding} className="mr-2" />
                         Kitchen & Dining
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
+                      <ul className="space-y-2 text-gray-300">
                         <li>• Full kitchen setup</li>
                         <li>• Coffee essentials</li>
                         <li>• Modern appliances</li>
@@ -283,11 +284,11 @@ export default function Waterford1315Property() {
                       </ul>
                     </div>
                     <div className="sm:col-span-2 md:col-span-1">
-                      <h3 className="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                      <h3 className="text-lg font-medium text-gray-300 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faDumbbell} className="mr-2" />
                         Added Conveniences
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
+                      <ul className="space-y-2 text-gray-300">
                         <li>• Free parking</li>
                         <li>• Resort-style pool</li>
                         <li>• Fitness center</li>
@@ -298,16 +299,16 @@ export default function Waterford1315Property() {
                 </div>
 
                 {/* Important Notes Section */}
-                <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-5">
+                <div className="bg-[#3B5FE3] shadow-xl/30 p-4 md:p-6 mb-5">
                 <div className="flex items-center gap-4 mb-4">
-                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 font-display tracking-tight">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-200 font-display tracking-tight">
                     Important Details
                     </h2>
-                    <hr className="flex-grow border-[#3B5FE3] opacity-70 border-2 rounded-full" />
+                    <hr className="flex-grow border-[#B4B4B4] opacity-50 border-4 rounded-full" />
                   </div>
                   <div className="space-y-4">
                     <div className="p-4 bg-blue-50 rounded-lg">
-                      <h3 className="text-lg font-medium text-gray-800 mb-2">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">
                         <FontAwesomeIcon icon={faClock} className="mr-2" />
                         Quiet Hours & Check-in
                       </h3>
@@ -317,7 +318,7 @@ export default function Waterford1315Property() {
                       </p>
                     </div>
                     <div className="p-4 bg-green-50 rounded-lg">
-                      <h3 className="text-lg font-medium text-gray-800 mb-2">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">
                         🐾 Pet Policy
                       </h3>
                       <p className="text-gray-600">
@@ -326,7 +327,7 @@ export default function Waterford1315Property() {
                       </p>
                     </div>
                     <div className="p-4 bg-red-50 rounded-lg">
-                      <h3 className="text-lg font-medium text-gray-800 mb-2">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">
                         ⚠️ House Rules
                       </h3>
                       <p className="text-gray-600">
@@ -345,13 +346,14 @@ export default function Waterford1315Property() {
                    <iframe
                     id="booking-iframe"
                     sandbox="allow-top-navigation allow-scripts allow-same-origin"
-                    style={{ width: "100%", height: "550px", border: "none" }}
+                    style={{ width: "100%", height: "700px", border: "none" }}
                     src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1934978"
                   />
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

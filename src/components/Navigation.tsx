@@ -28,7 +28,7 @@ const Navigation = () => {
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center h-full ml-10">
                   <Image
-                    src="logo.png"
+                    src="/logo.png"
                     alt="BPMG STAYS"
                     width={400}
                     height={120}
@@ -42,7 +42,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`lg:px-6 md:px-4 sm:px-2 py-5 rounded-md text-xl font-medium transition-colors duration-200 ${
+                className={`lg:px-6 md:px-4 sm:px-2 py-5 rounded-md lg:text-xl md:text-lg sm:text-base font-medium transition-colors duration-200 ${
                   pathname === item.href
                     ? "text-brand-white bg-brand-primary"
                     : "text-brand-white hover:text-brand-white hover:bg-brand-primary"

@@ -36,7 +36,8 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
         
-       
+        {/* Two-tone overlay */}
+        <div className="absolute inset-0 two-tone-overlay"></div>
         
         {/* Dark overlay for content readability */}
         {/* Content Overlay */}
