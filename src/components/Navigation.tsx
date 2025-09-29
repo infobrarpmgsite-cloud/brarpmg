@@ -29,7 +29,7 @@ const Navigation = () => {
             <div className="flex-shrink-0 rounded-full p-1 bg-white">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/logo.png"
+                  src="logo.png"
                   alt="BPMG STAYS"
                   width={400}
                   height={400}
