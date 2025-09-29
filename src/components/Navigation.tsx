@@ -15,42 +15,53 @@ const Navigation = () => {
 
   return (
     <nav
+      className="sticky top-0"
       style={{
-        top: 0,
         zIndex: 1000,
-        backgroundColor: "white",
+        backgroundColor: "#4F4F4F",
         boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
-        <div className="flex justify-between h-40">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <Link href="/" className="flex items-center h-full lg:ml-10">
-                  <Image
-                    src="./logo.png"
-                    alt="BPMG STAYS"
-                    width={400}
-                    height={120}
-                    className="h-28 w-auto object-contain"
-                  />
-                </Link>
-              </div>
-            </div>
-          <div className="flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`lg:px-6 md:px-4 sm:px-2 py-5 rounded-md text-sm lg:text-xl  font-medium transition-colors duration-200 ${
-                  pathname === item.href
-                    ? "text-brand-white bg-brand-primary"
-                    : "text-brand-white hover:text-brand-white hover:bg-brand-primary"
-                }`}
-              >
-                {item.name}
+      <div className="max-w-7xl mx-auto px-14 sm:px-8 lg:px-8">
+        <div className="flex justify-center items-center h-20">
+          <div className="flex items-center space-x-2">
+            {/* Logo */}
+            <div className="flex-shrink-0 rounded-full p-1 bg-white">
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/logo.png"
+                  alt="BPMG STAYS"
+                  width={400}
+                  height={400}
+                  className="h-12 w-auto object-contain"
+                />
               </Link>
-            ))}
+            </div>
+            
+            {/* Brand Name */}
+            <div className="flex-shrink-0 pr-15 lg:pr-10 hidden lg:block">
+              <Link href="/" className="flex items-center">
+                <h1 className="text-2xl font-bold text-[#B4B4B4]/90 tracking-tight " style={{ fontFamily: 'Segoe UI, sans-serif' }}>BPMG Stays</h1>
+              </Link>
+            </div>
+            
+            {/* Navigation items */}
+            <div className="flex items-center space-x-4 sm:pl-15 md:pl-15  lg:pl-0">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`uppercase px-2 py-2 rounded-md text-xs sm:text-sm md:text-base lg:text-lg font-medium text-white tracking-tight transition-colors duration-200 ${
+                    pathname === item.href
+                      ? "text-brand-white bg-brand-primary border-b-2 border-[#3B5FE3]"
+                      : "text-brand-white hover:text-brand-white hover:bg-[#3B5FE3]/30"
+                  }`}
+                  style={{ fontFamily: 'Segoe UI, sans-serif' }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
