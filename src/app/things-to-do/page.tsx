@@ -1,4 +1,6 @@
-/* eslint-disable */
+/* eslint-disable react/no-unescaped-entities */
+import Link from 'next/link';
+
 export default function ThingsToDo() {
   const sections = [
     { id: 'heart', title: 'Explore the Heart of Austin' },
@@ -27,14 +29,14 @@ export default function ThingsToDo() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto space-x-8 py-4">
             {sections.map((section) => (
-              <a
+              <Link
                 key={section.id}
                 href={`#${section.id}`}
                 className="text-gray-700 hover:text-[#3B5FE3] font-semibold whitespace-nowrap transition-colors duration-200 text-sm md:text-base"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {section.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -291,20 +293,20 @@ export default function ThingsToDo() {
                 Make BPMG Stays your base for exploring all the amazing attractions and activities Austin has to offer. Our properties are perfectly located for easy access to the best of the city.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/properties"
                   className="inline-block bg-white text-[#1B2845] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   View Our Properties
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/contact"
                   className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-200"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   Get in Touch
-                </a>
+                </Link>
               </div>
             </div>
           </div>
