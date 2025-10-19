@@ -48,8 +48,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="text-brand-lightGray space-y-2">
               <p>Email: info@bpmgstays.com</p>
-              <p>Phone: (555) 123-4567</p>
-              <p>Address: 123 Property St, City, State 12345</p>
+              <p>Phone: +1 (416) 729-3886</p>
             </div>
           </div>
         </div>

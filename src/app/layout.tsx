@@ -4,6 +4,8 @@ import "./globals.css";
 import { Outfit, Manrope, Poppins, Inter } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
+import { useState, useEffect } from "react";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -38,6 +40,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <html lang="en" className={`${outfit.variable} ${manrope.variable} ${poppins.variable} ${inter.variable}`}>
       <head>
@@ -48,6 +61,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Honk&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans antialiased abstract-bg">
+        <Loader isLoading={isLoading} />
         <Navigation />
         <main className="relative z-10">{children}</main>
         <Footer />

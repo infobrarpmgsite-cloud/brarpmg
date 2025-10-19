@@ -1,51 +1,44 @@
-import IframeWidget from "@/components/IframeWidget";
+import PropertyShowcase from "@/components/PropertyShowcase";
+import { propertiesData } from "@/utils/propertiesData";
 
 export default function Properties() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Our Properties
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Discover our collection of premium properties. Each property offers 
-          unique amenities and exceptional experiences.
-        </p>
-      </div>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Property Listings
-          </h2>
-          <IframeWidget
-            src="https://example.com/property-listings"
-            title="Property Listings Widget"
-            height="600px"
-          />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
+            Our Properties
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
+            Discover our collection of premium properties. Each property offers 
+            unique amenities and exceptional experiences tailored for your comfort.
+          </p>
         </div>
-        
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Featured Properties
-          </h2>
-          <IframeWidget
-            src="https://example.com/featured-properties"
-            title="Featured Properties Widget"
-            height="600px"
-          />
+
+        {/* Properties Showcase Grid */}
+        <div className="space-y-8">
+          {propertiesData.map((property) => (
+            <PropertyShowcase key={property.id} property={property} />
+          ))}
         </div>
-      </div>
-      
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4 text-center">
-          Property Search & Filters
-        </h2>
-        <IframeWidget
-          src="https://example.com/property-search-filters"
-          title="Property Search & Filters Widget"
-          height="500px"
-        />
+
+        {/* Call to Action */}
+        <div className="mt-16 text-center bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
+            Can&apos;t Find What You&apos;re Looking For?
+          </h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
+            Contact us directly and we&apos;ll help you find the perfect property for your needs.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            style={{ fontFamily: 'Segoe UI, sans-serif' }}
+          >
+            Contact Us
+          </a>
+        </div>
       </div>
     </div>
   );

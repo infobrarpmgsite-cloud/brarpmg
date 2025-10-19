@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Loader from "@/components/Loader";
 import {
   faBed,
   faBath,
@@ -104,6 +105,9 @@ const PauseIcon = ({ className }: { className?: string }) => (
 );
 
 export default function AllendaleUnitEProperty() {
+  // Loader state
+  const [isLoading, setIsLoading] = useState(true);
+  
   // Slider state
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -114,6 +118,14 @@ export default function AllendaleUnitEProperty() {
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
   
   const totalImages = allImages.length;
+
+  // Loader effect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Navigation functions
   const goToSlide = useCallback((index: number) => {
@@ -248,6 +260,7 @@ export default function AllendaleUnitEProperty() {
 
   return (
     <div className="">
+      <Loader isLoading={isLoading} />
       <div className="">
         <div className="p-2 lg:px-10 lg:py-4">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-10">
