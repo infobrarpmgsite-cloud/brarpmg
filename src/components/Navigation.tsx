@@ -10,6 +10,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Things to Do", href: "/things-to-do" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -29,7 +30,8 @@ const Navigation = () => {
             <div className="flex-shrink-0 rounded-full p-1 bg-white">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+                  // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+                    src="/Logo.PNG"
                   alt="BPMG STAYS"
                   width={400}
                   height={400}
