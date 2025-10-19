@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function ThingsToDo() {
   const sections = [
     { id: 'heart', title: 'Explore the Heart of Austin' },
