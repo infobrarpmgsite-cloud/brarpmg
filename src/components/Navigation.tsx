@@ -27,15 +27,16 @@ const Navigation = () => {
         <div className="flex justify-center items-center h-20">
           <div className="flex items-center space-x-2">
             {/* Logo */}
-            <div className="flex-shrink-0 rounded-full p-1 bg-white">
+            <div className="flex-shrink-0 rounded-full p-1 bg-white select-none" onContextMenu={(e) => e.preventDefault()}>
               <Link href="/" className="flex items-center">
                 <Image
-                  // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+                  // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG" 
                     src="/Logo.PNG"
                   alt="BPMG STAYS"
                   width={400}
                   height={400}
-                  className="h-12 w-auto object-contain"
+                  className="h-12 w-auto object-contain pointer-events-none"
+                  draggable={false}
                 />
               </Link>
             </div>
