@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loader from "@/components/Loader";
 import {
@@ -289,9 +290,11 @@ export default function AllendaleUnitEProperty() {
                     >
                       {allImages.map((image, index) => (
                         <div key={index} className="w-full flex-shrink-0 relative">
-                          <img
+                          <Image
                             src={image.src}
                             alt={image.alt}
+                            width={1200}
+                            height={800}
                             className="w-full h-[60vh] object-cover"
                             draggable={false}
                             loading={index === 0 ? "eager" : "lazy"}
@@ -365,9 +368,11 @@ export default function AllendaleUnitEProperty() {
                             }`}
                           style={{ width: '60px', height: '60px' }}
                         >
-                          <img
+                          <Image
                             src={image.src}
                             alt=""
+                            width={60}
+                            height={60}
                             className="w-full h-full object-cover"
                           />
                           {index === currentIndex && (

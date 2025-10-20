@@ -1,7 +1,7 @@
 "use client";
 
-import CategorizedImageGallery from "@/components/CategorizedImageGallery";
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBed,
@@ -39,29 +39,6 @@ import living1 from '@/assets/images/properties/spanish-207/Living room/1.webp';
 import living2 from '@/assets/images/properties/spanish-207/Living room/2.webp';
 import living3 from '@/assets/images/properties/spanish-207/Living room/3.webp';
 import living4 from '@/assets/images/properties/spanish-207/Living room/4.webp';
-
-const spanish207ImageCategories = [
-  {
-    name: "Living Room",
-    images: [living1, living2, living3, living4]
-  },
-  {
-    name: "Bedroom",
-    images: [bedroom1, bedroom2, bedroom3]
-  },
-  {
-    name: "Kitchen",
-    images: [kitchen1, kitchen2, kitchen3]
-  },
-  {
-    name: "Dining Area",
-    images: [dining1, dining2]
-  },
-  {
-    name: "Bathroom",
-    images: [bathroom1, bathroom2]
-  }
-];
 
 // Flatten all images for the enhanced slider
 const allImages = [
@@ -243,9 +220,11 @@ export default function Spanish207Property() {
                     >
                       {allImages.map((image, index) => (
                         <div key={index} className="w-full flex-shrink-0 relative">
-                          <img
+                          <Image
                             src={image.src}
                             alt={image.alt}
+                            width={1200}
+                            height={800}
                             className="w-full h-[60vh] object-cover"
                             draggable={false}
                             loading={index === 0 ? "eager" : "lazy"}
@@ -319,9 +298,11 @@ export default function Spanish207Property() {
                             }`}
                           style={{ width: '60px', height: '60px' }}
                         >
-                          <img
+                          <Image
                             src={image.src}
                             alt=""
+                            width={60}
+                            height={60}
                             className="w-full h-full object-cover"
                           />
                           {index === currentIndex && (
