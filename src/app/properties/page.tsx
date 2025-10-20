@@ -1,4 +1,5 @@
 import PropertyShowcase from "@/components/PropertyShowcase";
+import Link from "next/link";
 import { propertiesData } from "@/utils/propertiesData";
 
 export default function Properties() {
@@ -31,13 +32,13 @@ export default function Properties() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
             Contact us directly and we&apos;ll help you find the perfect property for your needs.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             style={{ fontFamily: 'Segoe UI, sans-serif' }}
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </div>

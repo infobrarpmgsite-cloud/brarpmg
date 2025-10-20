@@ -183,11 +183,11 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
   }
 
   return (
-    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-x-hidden">
+    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-x-hidden" style={{ overflow: 'visible' }}>
       {/* Enhanced Carousel Container */}
       <div 
         ref={sliderRef}
-        className="relative w-full h-full group sm:overflow-visible overflow-hidden"
+        className="relative w-full h-full group overflow-visible"
         style={{
           touchAction: 'pan-y'
         }}
