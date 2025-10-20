@@ -56,14 +56,14 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto space-x-8 py-4">
             {sections.map((section) => (
-              <Link
+              <a
                 key={section.id}
                 href={`#${section.id}`}
                 className="text-gray-700 hover:text-[#3B5FE3] font-semibold whitespace-nowrap transition-colors duration-200 text-sm md:text-base"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {section.title}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -215,20 +215,20 @@ export default function About() {
               No matter whether you&apos;re here for work, leisure, or a little of both, BPMG Stays is here to make your stay memorable. Come, stay with us — and discover a place where every stay feels like home.
             </p>
             <div className={`flex flex-col sm:flex-row gap-6 justify-center ${animatedSections.has('cta') ? 'animate-fadeInUp animation-delay-300' : 'opacity-0'}`}>
-              <a
+              <Link
                 href="/properties"
                 className="inline-block bg-white text-[#1B2845] font-bold py-4 px-12 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-lg"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 View Our Properties
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 className="inline-block bg-transparent border-3 border-white text-white font-bold py-4 px-12 rounded-lg hover:bg-white/10 transition-colors duration-200 text-lg"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
