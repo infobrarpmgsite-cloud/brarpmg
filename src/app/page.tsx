@@ -13,8 +13,8 @@ export default function Home() {
           {/* Logo */}
           <div className='flex-shrink-0 rounded-full p-10 bg-white/50'>
             <Image 
-              // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
-              src="/Logo.PNG"
+               src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+              // src="/Logo.PNG"
               alt="BPMG STAYS"
               width={400}
               height={400}
@@ -45,8 +45,8 @@ export default function Home() {
           </div>
         </div>
         <Script src="https://hospitable.b-cdn.net/direct-property-search-widget/hospitable-search-widget.prod.js" />
-        <div style={{ position: 'absolute', zIndex: 50, width: '100%', left: 0, right: 0 }}>
-          <div dangerouslySetInnerHTML={{
+        <div style={{ position: 'relative', zIndex: 99999, width: '100%' }}>
+          <div style={{ position: 'relative' }} dangerouslySetInnerHTML={{
             __html: '<hospitable-direct-mps identifier="47ea57e8-c278-4bae-bda6-6197f2e06932" type="custom" results-url="/brarpmg/search"></hospitable-direct-mps>'
           }} />
         </div>

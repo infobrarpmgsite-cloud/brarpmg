@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
@@ -28,7 +30,7 @@ export default function Contact() {
                 Available 24/7
               </p>
               <a href="tel:+1512XXXXXXX" className="text-2xl font-semibold text-[#3B5FE3] hover:underline" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              +1 (416) 729-3886
+              1-888-777-0870
               </a>
             </div>
 
@@ -56,13 +58,13 @@ export default function Contact() {
             <p className="text-lg mb-8 leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'Manrope, sans-serif' }}>
               Explore our properties and book your perfect stay today.
             </p>
-            <a
+            <Link
               href="/properties"
               className="inline-block bg-white text-[#1B2845] font-bold py-4 px-10 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-lg"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               View Properties
-            </a>
+            </Link>
           </div>
         </div>
       </div>
