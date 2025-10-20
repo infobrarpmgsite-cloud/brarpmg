@@ -183,11 +183,14 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
   }
 
   return (
-    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen">
+    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-x-hidden">
       {/* Enhanced Carousel Container */}
       <div 
         ref={sliderRef}
-        className="relative w-full h-full group overflow-hidden"
+        className="relative w-full h-full group sm:overflow-visible overflow-hidden"
+        style={{
+          touchAction: 'pan-y'
+        }}
         onMouseEnter={stopAutoPlay}
         onMouseLeave={startAutoPlay}
         onMouseDown={handleStart}
