@@ -30,8 +30,8 @@ const Navigation = () => {
             <div className="flex-shrink-0 rounded-full p-1 bg-white select-none" onContextMenu={(e) => e.preventDefault()}>
               <Link href="/" className="flex items-center">
                 <Image
-                   // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG" 
-                   src="/Logo.PNG"
+                    src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG" 
+                   //src="/Logo.PNG"
                   alt="BPMG STAYS"
                   width={400}
                   height={400}
