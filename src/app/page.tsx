@@ -1,6 +1,7 @@
 'use client';
 
 import Script from 'next/script';
+import Image from 'next/image';
 import ContentCarousel from '@/components/ContentCarousel';
 
 export default function Home() {
@@ -11,13 +12,15 @@ export default function Home() {
         <div className='w-full mx-auto -mt-25 lg:-mt-25 flex flex-col items-center justify-center'>
           {/* Logo */}
           <div className='flex-shrink-0 rounded-full p-10 bg-white/50'>
-            <img 
-              src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+            <Image 
+              // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+              src="/Logo.PNG"
               alt="BPMG STAYS"
               width={400}
               height={400}
               className="h-40 lg:h-80 w-auto mx-auto object-contain pointer-events-none"
               draggable={false}
+              priority
             />
           </div>
           

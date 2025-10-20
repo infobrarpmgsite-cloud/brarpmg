@@ -1,5 +1,3 @@
-import IframeWidget from "@/components/IframeWidget";
-
 export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
