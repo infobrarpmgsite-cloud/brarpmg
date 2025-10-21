@@ -44,7 +44,7 @@ export default function Contact() {
                 We respond within 24 hours
               </p>
               <a href="mailto:info@bpmgstays.com" className="text-2xl font-semibold text-[#3B5FE3] hover:underline" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                info@bpmgstays.com
+              info@brarpmg.com
               </a>
             </div>
           </div>
