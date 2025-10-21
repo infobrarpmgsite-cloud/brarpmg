@@ -183,13 +183,14 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
   }
 
   return (
-    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-x-hidden" style={{ overflow: 'visible' }}>
+    <div className="w-full h-screen sm:h-screen md:h-screen lg:h-screen relative">
       {/* Enhanced Carousel Container */}
       <div 
         ref={sliderRef}
-        className="relative w-full h-full group overflow-visible"
+        className="relative w-full h-full group"
         style={{
-          touchAction: 'pan-y'
+          touchAction: 'pan-y',
+          overflow: 'hidden'
         }}
         onMouseEnter={stopAutoPlay}
         onMouseLeave={startAutoPlay}
@@ -237,8 +238,8 @@ export default function ContentCarousel({ children }: ContentCarouselProps) {
         <div className="absolute inset-0 two-tone-overlay"></div>
         
         {/* Content Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div>
+        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 50 }}>
+          <div className="w-full" style={{ position: 'relative', overflow: 'visible' }}>
             {children}
           </div>
         </div>

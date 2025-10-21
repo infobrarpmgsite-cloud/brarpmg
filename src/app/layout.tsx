@@ -1,7 +1,7 @@
 "use client";
 
 import "./globals.css";
-import { Outfit, Manrope, Poppins, Inter } from "next/font/google";
+import { Outfit, Manrope, Poppins, Inter, Lavishly_Yours, Quintessential } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
@@ -35,6 +35,20 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const lavishlyYours = Lavishly_Yours({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lavishly-yours",
+  weight: ["400"],
+});
+
+const quintessential = Quintessential({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-quintessential",
+  weight: ["400"],
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -52,7 +66,7 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en" className={`${outfit.variable} ${manrope.variable} ${poppins.variable} ${inter.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${manrope.variable} ${poppins.variable} ${inter.variable} ${lavishlyYours.variable} ${quintessential.variable}`}>
       <head>
         <title>BRAR PMG</title>
         <meta name="description" content="BRAR Property Management Group" />
