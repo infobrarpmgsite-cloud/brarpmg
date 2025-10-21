@@ -38,7 +38,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#1B2845] to-[#3B5FE3] text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -46,31 +46,40 @@ export default function About() {
             About BPMG Stays
           </h1>
           <p className="text-lg md:text-xl font-light text-blue-100 max-w-2xl mx-auto" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Your Home-Away-From-Home in the Heart of Austin
+             RESIDENTIAL AND VACATION HOMES
           </p>
         </div>
       </div>
 
       {/* Section Navigation */}
-      <div className="sticky top-20 bg-white border-b border-gray-200 z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto space-x-8 py-4">
-            {sections.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="text-gray-700 hover:text-[#3B5FE3] font-semibold whitespace-nowrap transition-colors duration-200 text-sm md:text-base"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                {section.title}
-              </a>
-            ))}
+      <div 
+        className="sticky bg-white border-b border-gray-200 shadow-sm"
+        style={{
+          top: '80px',
+          zIndex: 900
+        }}
+      >
+        <div className="w-full overflow-x-auto">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center space-x-4 md:space-x-8 py-4 min-w-max md:min-w-0">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="text-gray-700 hover:text-[#3B5FE3] font-semibold whitespace-nowrap transition-colors duration-200 text-xs sm:text-sm md:text-base px-2"
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  {section.title}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* About Section */}
-      <div className={`bg-gradient-to-r from-[#1B2845] to-[#3B5FE3] text-white ${animatedSections.has('about') ? 'animate-fadeIn' : 'opacity-0'}`} id="about">
+      <div className="bg-white overflow-x-hidden">
+        {/* About Section */}
+        <div className={`bg-gradient-to-r from-[#1B2845] to-[#3B5FE3] text-white ${animatedSections.has('about') ? 'animate-fadeIn' : 'opacity-0'}`} id="about">
         {/* Enhanced Hero Section with Welcome */}
         <div className="py-32 md:py-52 scroll-mt-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -81,10 +90,9 @@ export default function About() {
             
             {/* Main Welcome Message */}
             <div className="max-w-5xl mx-auto">
-              <p className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight ${animatedSections.has('about') ? 'animate-fadeInUp animation-delay-200' : 'opacity-0'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Your Home-Away-From-Home in the Heart of Austin
+              <p className={`text-5xl md:text-6xl lg:text-7xl font-light mb-12 leading-tight ${animatedSections.has('about') ? 'animate-fadeInUp animation-delay-200' : 'opacity-0'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Your <strong style={{ fontWeight: 'bold' ,opacity: '70%'}}>RESIDENTIAL AND VACATION HOMES</strong> in the Heart of Austin
               </p>
-              
               {/* Description */}
               <p className={`text-xl md:text-2xl text-blue-100/90 leading-relaxed mb-14 max-w-4xl mx-auto ${animatedSections.has('about') ? 'animate-fadeInUp animation-delay-300' : 'opacity-0'}`} style={{ fontFamily: 'Manrope, sans-serif' }}>
                 We believe staying somewhere should be more than just a place to sleep — it should feel like an experience crafted just for you. At BPMG Stays, we&apos;ve created a lodging space where warm service, thoughtful design, and authentic local flavor come together to make your stay unforgettable.
@@ -233,6 +241,7 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

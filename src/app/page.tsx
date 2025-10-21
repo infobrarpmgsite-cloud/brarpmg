@@ -6,50 +6,76 @@ import ContentCarousel from '@/components/ContentCarousel';
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full relative">
+    <div className="mx-auto w-full relative overflow-x-hidden">
       {/* Carousel and Search Section */}
       <ContentCarousel>
-        <div className='w-full mx-auto -mt-25 lg:-mt-25 flex flex-col items-center justify-center'>
+        <div className='w-full mx-auto -mt-25 lg:-mt-25 flex flex-col items-center justify-center px-4'>
           {/* Logo */}
-          <div className='flex-shrink-0 rounded-full p-10 bg-white/50'>
+          <div className='flex-shrink-0 rounded-full p-6 md:p-10 bg-white/50'>
             <Image 
               src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
               //src="/Logo.PNG"
               alt="BPMG STAYS"
               width={400}
               height={400}
-              className="h-40 lg:h-80 w-auto mx-auto object-contain pointer-events-none"
+              className="h-32 sm:h-40 lg:h-80 w-auto mx-auto object-contain pointer-events-none"
               draggable={false}
               priority
             />
           </div>
           
-          {/* Slogan */}
-          <div className="text-center mt-8 md:mt-12 space-y-4 w-full px-4">
-            {/* Decorative line top */}
-            <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap">
-              <div className="w-8 md:w-12 h-1 bg-white/60 rounded-full"></div>
-              <span className="text-white/80 text-xs md:text-base tracking-widest whitespace-nowrap" style={{ fontFamily: 'Manrope, sans-serif' }}>HOME AWAY FROM HOME</span>
-              <div className="w-8 md:w-12 h-1 bg-white/60 rounded-full"></div>
-            </div>
-            
-            {/* Main Slogan */}
-            <p className="text-white text-3xl md:text-5xl font-bold leading-tight" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px' }}>
-              A Stay That Feels<br />Like Home
-            </p>
-            
-            {/* Decorative line bottom */}
-            <div className="flex items-center justify-center">
-              <div className="w-8 md:w-12 h-1 bg-white/60 rounded-full"></div>
-            </div>
-          </div>
+         
         </div>
         <Script src="https://hospitable.b-cdn.net/direct-property-search-widget/hospitable-search-widget.prod.js" />
-        <div style={{ position: 'relative', zIndex: 99999, width: '100%' }}>
+        <div className="max-w-2xl mx-auto px-4 w-full" style={{ position: 'relative', zIndex: 99999 }}>
+          <style jsx global>{`
+            hospitable-direct-mps {
+              --hospitable-font-size-base: 14px !important;
+              --hospitable-font-size-lg: 16px !important;
+              --hospitable-input-height: 40px !important;
+              --hospitable-button-height: 40px !important;
+              --hospitable-border-radius: 8px !important;
+              font-size: 14px !important;
+            }
+            hospitable-direct-mps .hospitable-search-widget {
+              max-width: 100% !important;
+              padding: 16px !important;
+            }
+              hospitable-mps .date-picker-container{
+            padding: 15px !important;
+            }
+            @media (max-width: 640px) {
+              hospitable-direct-mps {
+                --hospitable-font-size-base: 12px !important;
+                --hospitable-font-size-lg: 14px !important;
+                --hospitable-input-height: 36px !important;
+                --hospitable-button-height: 36px !important;
+              }
+            }
+          `}</style>
           <div style={{ position: 'relative' }} dangerouslySetInnerHTML={{
             __html: '<hospitable-direct-mps identifier="47ea57e8-c278-4bae-bda6-6197f2e06932" type="custom" results-url="/brarpmg/search"></hospitable-direct-mps>'
           }} />
         </div>
+         {/* Slogan */}
+         <div className="text-center space-y-4 w-full max-w-screen-lg mx-auto">
+            {/* Decorative line top */}
+            <div className="flex items-center justify-center gap-2 md:gap-4 flex-wrap px-2">
+              <div className="w-6 md:w-12 h-1 bg-white/60 rounded-full"></div>
+              <span className="text-white/80 font-medium text-[10px] sm:text-xs md:text-base tracking-widest" style={{ fontFamily: 'Manrope, sans-serif' }}>RESIDENTIAL AND VACATION HOMES</span>
+              <div className="w-6 md:w-12 h-1 bg-white/60 rounded-full"></div>
+            </div>
+            
+            {/* Main Slogan */}
+            <p className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-relaxed px-4" style={{ fontFamily: 'Quintessential, sans-serif', letterSpacing: '0.5px' }}>
+              A Stay That Feels Like Home
+            </p>
+            
+            {/* Decorative line bottom */}
+            <div className="flex items-center justify-center">
+              <div className="w-6 md:w-12 h-1 bg-white/60 rounded-full"></div>
+            </div>
+          </div>
       </ContentCarousel>
     </div>
   );

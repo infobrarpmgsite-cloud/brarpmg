@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ThingsToDo() {
   const sections = [
@@ -11,7 +12,7 @@ export default function ThingsToDo() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#1B2845] to-[#3B5FE3] text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -25,24 +26,33 @@ export default function ThingsToDo() {
       </div>
 
       {/* Section Navigation */}
-      <div className="sticky top-20 bg-white border-b border-gray-200 z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto space-x-8 py-4">
-            {sections.map((section) => (
-              <Link
-                key={section.id}
-                href={`#${section.id}`}
-                className="text-gray-700 hover:text-[#3B5FE3] font-semibold whitespace-nowrap transition-colors duration-200 text-sm md:text-base"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                {section.title}
-              </Link>
-            ))}
+      <div 
+        className="sticky bg-white border-b border-gray-200 shadow-sm"
+        style={{
+          top: '80px',
+          zIndex: 900
+        }}
+      >
+        <div className="w-full overflow-x-auto">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center space-x-4 md:space-x-8 py-4 min-w-max md:min-w-0">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="text-gray-700 hover:text-[#3B5FE3] font-semibold whitespace-nowrap transition-colors duration-200 text-xs sm:text-sm md:text-base px-2"
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  {section.title}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main Content - Intro */}
+      <div className="bg-white overflow-x-hidden">
+        {/* Main Content - Intro */}
       <div className="min-h-screen bg-white flex items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl mx-auto">
@@ -52,8 +62,14 @@ export default function ThingsToDo() {
                   A city known for its rhythm, flavor, and free spirit, Austin, Texas offers something for every kind of traveler — from foodies and music lovers to nature seekers and creative souls. No matter which of our BPMG Stays locations you choose — from North Central to South Austin — you'll find yourself close to the best the city has to offer.
                 </p>
               </div>
-              <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center border-2 border-gray-300">
-                <span className="text-gray-400 text-xl" style={{ fontFamily: 'Poppins, sans-serif' }}>Image Placeholder</span>
+              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=800&h=600&fit=crop"
+                  alt="Austin Texas Skyline"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -71,8 +87,14 @@ export default function ThingsToDo() {
                   Experience the city's perfect blend of culture and charm. From strolling through Downtown Austin's iconic 6th Street and South Congress Avenue to catching a live band at a tucked-away venue, the city's energy is undeniable. Austin's creative scene spills into every corner — where local art, food trucks, and music turn every visit into a story worth sharing.
                 </p>
               </div>
-              <div className="bg-white/20 rounded-lg h-96 flex items-center justify-center border-2 border-white/40">
-                <span className="text-white text-xl" style={{ fontFamily: 'Poppins, sans-serif' }}>Image Placeholder</span>
+              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl border-2 border-white/40">
+                <Image
+                  src="https://images.unsplash.com/photo-1569014576396-196a71f4f4a6?w=800&h=600&fit=crop"
+                  alt="Downtown Austin 6th Street"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -106,8 +128,14 @@ export default function ThingsToDo() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-300 rounded-lg h-96 flex items-center justify-center border-2 border-gray-400">
-                <span className="text-gray-500 text-xl" style={{ fontFamily: 'Poppins, sans-serif' }}>Image Placeholder</span>
+              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
+                  alt="Zilker Park and Lady Bird Lake"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -125,8 +153,14 @@ export default function ThingsToDo() {
                   Austin is called the "Live Music Capital of the World" for a reason. Catch an intimate performance at The Continental Club, discover indie acts at Mohawk or The Parish, or join the crowd at legendary festivals like SXSW and Austin City Limits. Art lovers can stroll through the Blanton Museum of Art, East Austin Studio Tour, or admire vibrant murals that decorate nearly every street.
                 </p>
               </div>
-              <div className="bg-white/20 rounded-lg h-96 flex items-center justify-center border-2 border-white/40">
-                <span className="text-white text-xl" style={{ fontFamily: 'Poppins, sans-serif' }}>Image Placeholder</span>
+              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl border-2 border-white/40">
+                <Image
+                  src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&h=600&fit=crop"
+                  alt="Live Music in Austin"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -156,8 +190,14 @@ export default function ThingsToDo() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-orange-100 rounded-lg h-96 flex items-center justify-center border-2 border-orange-200">
-                <span className="text-orange-400 text-xl" style={{ fontFamily: 'Poppins, sans-serif' }}>Image Placeholder</span>
+              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop"
+                  alt="Austin Food and Tacos"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -312,6 +352,7 @@ export default function ThingsToDo() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
