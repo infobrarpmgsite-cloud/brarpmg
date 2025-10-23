@@ -2,6 +2,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Import images from assets
+import thingsToDoImage1 from '@/assets/images/thingstodo/1.jpg';
+import thingsToDoImage2 from '@/assets/images/thingstodo/2.jpg';
+import thingsToDoImage3 from '@/assets/images/thingstodo/3.jpg';
+import thingsToDoImage4 from '@/assets/images/thingstodo/4.jpg';
+import thingsToDoImage5 from '@/assets/images/thingstodo/5.jpg';
+
 export default function ThingsToDo() {
   const sections = [
     { id: 'heart', title: 'Explore the Heart of Austin' },
@@ -53,48 +60,65 @@ export default function ThingsToDo() {
 
       <div className="bg-white overflow-x-hidden">
         {/* Main Content - Intro */}
-      <div className="min-h-screen bg-white flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-2xl text-gray-700 leading-relaxed font-light" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                  A city known for its rhythm, flavor, and free spirit, Austin, Texas offers something for every kind of traveler — from foodies and music lovers to nature seekers and creative souls. No matter which of our BPMG Stays locations you choose — from North Central to South Austin — you'll find yourself close to the best the city has to offer.
+      <div className="relative min-h-screen flex items-center py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={thingsToDoImage1}
+            alt="Austin Texas Skyline"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          {/* Dark Overlay for Better Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            {/* Emphasized Text */}
+            <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-3xl p-12 md:p-16 lg:p-20 shadow-2xl">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Discover Austin&apos;s Magic
+              </h2>
+              <p className="text-xl md:text-2xl lg:text-3xl text-white leading-relaxed font-light" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                A city known for its <span className="font-bold text-blue-200">rhythm, flavor, and free spirit</span>, Austin, Texas offers something for every kind of traveler — from foodies and music lovers to nature seekers and creative souls. 
+              </p>
+              <div className="mt-10 pt-10 border-t border-white/30">
+                <p className="text-lg md:text-xl text-blue-100 leading-relaxed italic" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                  No matter which of our BPMG Stays locations you choose — from North Central to South Austin — you&apos;ll find yourself close to the best the city has to offer.
                 </p>
-              </div>
-              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=800&h=600&fit=crop"
-                  alt="Austin Texas Skyline"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
               </div>
             </div>
           </div>
         </div>
+
+        {/* Decorative Element */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
       </div>
 
       {/* Section 1: Explore the Heart of Austin */}
-      <div id="heart" className="min-h-screen bg-gradient-to-r from-[#3B5FE3] to-[#1B2845] text-white flex items-center scroll-mt-20">
+      <div id="heart" className="min-h-screen bg-gradient-to-r from-[#3B5FE3] to-[#1B2845] text-white flex items-center scroll-mt-20 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>Explore the Heart of Austin</h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>Explore the Heart of Austin</h2>
                 <p className="text-xl leading-relaxed font-light" style={{ fontFamily: 'Manrope, sans-serif' }}>
                   Experience the city's perfect blend of culture and charm. From strolling through Downtown Austin's iconic 6th Street and South Congress Avenue to catching a live band at a tucked-away venue, the city's energy is undeniable. Austin's creative scene spills into every corner — where local art, food trucks, and music turn every visit into a story worth sharing.
                 </p>
               </div>
-              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl border-2 border-white/40">
+              <div className="order-1 md:order-2 relative rounded-2xl h-[500px] overflow-hidden shadow-2xl border-4 border-white/30 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1569014576396-196a71f4f4a6?w=800&h=600&fit=crop"
+                  src={thingsToDoImage2}
                   alt="Downtown Austin 6th Street"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -102,14 +126,24 @@ export default function ThingsToDo() {
       </div>
 
       {/* Section 2: Outdoor Adventures */}
-      <div id="outdoor" className="min-h-screen bg-[#F0F4F8] flex items-center scroll-mt-20">
+      <div id="outdoor" className="min-h-screen bg-[#F0F4F8] flex items-center scroll-mt-20 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative rounded-2xl h-[500px] overflow-hidden shadow-2xl group">
+                <Image
+                  src={thingsToDoImage3}
+                  alt="Zilker Park and Lady Bird Lake"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              </div>
               <div>
-                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8" style={{ fontFamily: 'Poppins, sans-serif' }}>Outdoor Adventures</h2>
+                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>Outdoor Adventures</h2>
                 <p className="text-xl text-gray-700 font-semibold mb-8" style={{ fontFamily: 'Manrope, sans-serif' }}>Nature thrives right alongside city life here:</p>
-                <ul className="space-y-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                <ul className="space-y-5" style={{ fontFamily: 'Manrope, sans-serif' }}>
                   <li className="flex items-start gap-3 text-lg">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#3B5FE3] mt-2 flex-shrink-0"></span>
                     <span className="text-gray-700"><strong>Zilker Park</strong> – Austin's beloved urban oasis, perfect for picnics, kayaking on Lady Bird Lake, or just soaking up the skyline.</span>
@@ -128,39 +162,31 @@ export default function ThingsToDo() {
                   </li>
                 </ul>
               </div>
-              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
-                  alt="Zilker Park and Lady Bird Lake"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Section 3: Arts, Culture & Live Music */}
-      <div id="arts" className="min-h-screen bg-gradient-to-r from-[#1B2845] to-[#3B5FE3] text-white flex items-center scroll-mt-20">
+      <div id="arts" className="min-h-screen bg-gradient-to-r from-[#1B2845] to-[#3B5FE3] text-white flex items-center scroll-mt-20 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>Arts, Culture & Live Music</h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>Arts, Culture & Live Music</h2>
                 <p className="text-xl leading-relaxed font-light" style={{ fontFamily: 'Manrope, sans-serif' }}>
                   Austin is called the "Live Music Capital of the World" for a reason. Catch an intimate performance at The Continental Club, discover indie acts at Mohawk or The Parish, or join the crowd at legendary festivals like SXSW and Austin City Limits. Art lovers can stroll through the Blanton Museum of Art, East Austin Studio Tour, or admire vibrant murals that decorate nearly every street.
                 </p>
               </div>
-              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl border-2 border-white/40">
+              <div className="order-1 md:order-2 relative rounded-2xl h-[500px] overflow-hidden shadow-2xl border-4 border-white/30 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&h=600&fit=crop"
+                  src={thingsToDoImage4}
                   alt="Live Music in Austin"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -168,14 +194,24 @@ export default function ThingsToDo() {
       </div>
 
       {/* Section 4: Local Flavor & Dining */}
-      <div id="dining" className="min-h-screen bg-[#FFF8F0] flex items-center scroll-mt-20">
+      <div id="dining" className="min-h-screen bg-[#FFF8F0] flex items-center scroll-mt-20 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative rounded-2xl h-[500px] overflow-hidden shadow-2xl group">
+                <Image
+                  src={thingsToDoImage5}
+                  alt="Austin Food and Tacos"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              </div>
               <div>
-                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8" style={{ fontFamily: 'Poppins, sans-serif' }}>Local Flavor & Dining</h2>
+                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>Local Flavor & Dining</h2>
                 <p className="text-xl text-gray-700 font-semibold mb-8" style={{ fontFamily: 'Manrope, sans-serif' }}>Austin's food scene is a journey in itself — a mix of bold flavors and local favorites.</p>
-                <ul className="space-y-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                <ul className="space-y-5" style={{ fontFamily: 'Manrope, sans-serif' }}>
                   <li className="flex items-start gap-3 text-lg">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#FF6B35] mt-2 flex-shrink-0"></span>
                     <span className="text-gray-700">Savor authentic Texas BBQ at Franklin Barbecue or La Barbecue.</span>
@@ -189,15 +225,6 @@ export default function ThingsToDo() {
                     <span className="text-gray-700">Enjoy cozy coffee stops, local breweries, and rooftop bars that celebrate Austin's laid-back yet vibrant vibe.</span>
                   </li>
                 </ul>
-              </div>
-              <div className="relative rounded-lg h-96 overflow-hidden shadow-xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop"
-                  alt="Austin Food and Tacos"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
               </div>
             </div>
           </div>
