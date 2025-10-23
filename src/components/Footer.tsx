@@ -50,6 +50,11 @@ const Footer = () => {
               <p>Email:  info@brarpmg.com</p>
               <p>Phone: 1-888-777-0870</p>
             </div>
+            <div className="mt-4 p-3 bg-blue-50 border-l-4 border-[#3B5FE3] rounded-r-lg">
+              <p className="text-xs text-gray-700 leading-relaxed text-left" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                <span className="font-semibold text-[#3B5FE3]">📋 Note:</span> Please note that this contact number is designated for voice calls only. For prompt assistance, please reach out via phone call. Thank you for your understanding and cooperation.
+              </p>
+            </div>
           </div>
         </div>
         

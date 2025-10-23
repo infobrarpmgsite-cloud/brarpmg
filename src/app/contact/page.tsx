@@ -32,6 +32,11 @@ export default function Contact() {
               <a href="tel:+1512XXXXXXX" className="text-2xl font-semibold text-[#3B5FE3] hover:underline" style={{ fontFamily: 'Poppins, sans-serif' }}>
               1-888-777-0870
               </a>
+              <div className="mt-4 p-4 bg-blue-50 border-l-4 border-[#3B5FE3] rounded-r-lg">
+                <p className="text-sm text-gray-700 leading-relaxed text-left" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                  <span className="font-semibold text-[#3B5FE3]">📋 Note:</span> Please note that this contact number is designated for voice calls only. For prompt assistance, please reach out via phone call. Thank you for your understanding and cooperation.
+                </p>
+              </div>
             </div>
 
             {/* Email */}
