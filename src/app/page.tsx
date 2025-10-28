@@ -54,7 +54,7 @@ export default function Home() {
             }
           `}</style>
           <div style={{ position: 'relative' }} dangerouslySetInnerHTML={{
-            __html: '<hospitable-direct-mps identifier="47ea57e8-c278-4bae-bda6-6197f2e06932" type="custom" results-url="/brarpmg/search"></hospitable-direct-mps>'
+            __html: `<hospitable-direct-mps identifier="${process.env.NEXT_PUBLIC_HOSPITABLE_SEARCH_IDENTIFIER}" type="custom" results-url="/search"></hospitable-direct-mps>`
           }} />
         </div>
          {/* Slogan */}

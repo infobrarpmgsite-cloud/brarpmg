@@ -68,8 +68,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${manrope.variable} ${poppins.variable} ${inter.variable} ${lavishlyYours.variable} ${quintessential.variable}`}>
       <head>
-        <title>BRAR PMG</title>
-        <meta name="description" content="BRAR Property Management Group" />
+        <title>BPMG Stays</title>
+        <meta name="description" content="BPMG Stays" />
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
       </head>
       <body className="font-sans antialiased abstract-bg">
         <Loader isLoading={isLoading} />

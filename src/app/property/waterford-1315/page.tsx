@@ -596,7 +596,7 @@ export default function Waterford1315Property() {
                     id="booking-iframe"
                     sandbox="allow-top-navigation allow-scripts allow-same-origin"
                     style={{ width: "100%", height: "750px", border: "none" }}
-                    src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1934978"
+                    src={`https://booking.hospitable.com/widget/${process.env.NEXT_PUBLIC_HOSPITABLE_WIDGET_ID}/${process.env.NEXT_PUBLIC_PROPERTY_WATERFORD_1315}`}
                   />
                 </div>
               </div>

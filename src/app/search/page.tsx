@@ -17,7 +17,7 @@ export default function Search() {
       <div>
       <Script src="https://hospitable.b-cdn.net/direct-property-search-widget/hospitable-search-widget.prod.js"/>
         <div className='bg-white shadow-lg px-2 md:px-6 pb-4 overflow-auto ' dangerouslySetInnerHTML={{
-          __html: '<hospitable-direct-mps identifier="47ea57e8-c278-4bae-bda6-6197f2e06932" type="custom"></hospitable-direct-mps>'
+          __html: `<hospitable-direct-mps identifier="${process.env.NEXT_PUBLIC_HOSPITABLE_SEARCH_IDENTIFIER}" type="custom"></hospitable-direct-mps>`
         }} />
       </div>
     </div>
