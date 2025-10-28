@@ -235,7 +235,7 @@ export default function AllendateUnitEProperty() {
                     id="booking-iframe"
                     sandbox="allow-top-navigation allow-scripts allow-same-origin"
                     style={{ width: "100%", height: "700px", border: "none" }}
-                    src="https://booking.hospitable.com/widget/9fc65099-955b-4d47-bae2-d379767ffe06/1939010"
+                    src={`https://booking.hospitable.com/widget/${process.env.NEXT_PUBLIC_HOSPITABLE_WIDGET_ID}/${process.env.NEXT_PUBLIC_PROPERTY_ALLENDALE_UNIT_E}`}
                   />
                 </div>
               </div>
