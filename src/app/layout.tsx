@@ -70,8 +70,6 @@ export default function RootLayout({
       <head>
         <title>BPMG Stays</title>
         <meta name="description" content="BPMG Stays" />
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
       </head>
       <body className="font-sans antialiased abstract-bg">
         <Loader isLoading={isLoading} />
