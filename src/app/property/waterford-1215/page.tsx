@@ -322,7 +322,7 @@ export default function Waterford1215Property() {
       <div className="">
         <div className="p-2 lg:px-10 lg:py-4">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-10">
-            <div className="col-span-10 lg:col-span-4 bg-white rounded-4xl p-2 h-[750]">
+            <div className="col-span-10 xl:col-span-4 bg-white rounded-4xl p-2 xl:h-[750] h-[550]">
               {/* Enhanced Image Slider */}
               <div className="mb-8">
                 <div className="relative group">
@@ -447,9 +447,9 @@ export default function Waterford1215Property() {
                 </div>
               </div>
             </div>
-            <div className="col-span-10 lg:col-span-6 rounded-4xl bg-white lg:p-2">
-              <div className="grid grid-cols-1 lg:grid-cols-3">
-                <div className="col-span-3 lg:col-span-2">
+            <div className="col-span-10 xl:col-span-6 rounded-4xl bg-white lg:p-2 h-[750px]">
+              <div className="grid grid-cols-6">
+                <div className="col-span-6 lg:col-span-4 md:col-span-4 xl:col-span-4">
                   <div className="lg:p-4">
                     <h1 className="text-2xl text-[#1B2845] font-bold lg:p-2 p-5" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
                       The Domain Spot | Chic & Central in North ATX
@@ -550,15 +550,33 @@ export default function Waterford1215Property() {
                         </div>
                       </div>
                     </div>
-                    <div className="px-4">
+                   
+                  </div>
+                </div>
+                <div className="col-span-6 lg:col-span-2 md:col-span-2 xl:col-span-2 p-5 lg:border-l lg:border-[#B4B4B4]">
+                  <iframe
+                    id="booking-iframe"
+                    sandbox="allow-top-navigation allow-scripts allow-same-origin"
+                    style={{ width: "100%", height: "700px", border: "none" }}
+                    src={`https://booking.hospitable.com/widget/${process.env.NEXT_PUBLIC_HOSPITABLE_WIDGET_ID}/${process.env.NEXT_PUBLIC_PROPERTY_WATERFORD_1215}`}
+                  />
+                </div>
+                <div>
+                  
+                </div>
+              </div>
+            </div>
+            <div className="col-span-10 bg-white rounded-4xl p-2">
+            <div className="px-4">
                       <div className="lg:flex lg:items-center gap-4 mb-4 text-center lg:text-left">
-                        <h2 className="text-md font-semibold text-gray-800 tracking-tight" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
+                      <hr className="flex-grow border-[#B4B4B4] opacity-50 border-2 rounded-full" />
+                        <h2 className="text-lg font-semibold text-gray-800 tracking-tight" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
                           Important Details
                         </h2>
                         <hr className="flex-grow border-[#B4B4B4] opacity-50 border-2 rounded-full" />
                       </div>
-                      <div className="space-y-4">
-                        <div className="p-4 bg-blue-50 rounded-lg ">
+                      <div className="space-y-4 grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 gap-4">
+                        <div className="p-4 bg-blue-50 rounded-lg col-span-1">
                           <h3 className="text-md font-bold text-gray-800 mb-2" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
                             <FontAwesomeIcon icon={faClock} className="mr-2" />
                             Quiet Hours & Check-in
@@ -568,7 +586,7 @@ export default function Waterford1215Property() {
                             available upon request (additional fee applies).
                           </p>
                         </div>
-                        <div className="p-4 bg-green-50 rounded-lg">
+                        <div className="p-4 bg-green-50 rounded-lg col-span-1">
                           <h3 className="text-md font-bold text-gray-800 mb-2" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
                             🐾 Pet Policy
                           </h3>
@@ -577,7 +595,7 @@ export default function Waterford1215Property() {
                             | $300/month (Max 2 pets per stay)
                           </p>
                         </div>
-                        <div className="p-4 bg-red-50 rounded-lg">
+                        <div className="p-4 bg-red-50 rounded-lg col-span-1">
                           <h3 className="text-md font-bold text-gray-800 mb-2" style={{ fontFamily: 'Segoe UI, sans-serif' }}>
                             ⚠️ House Rules
                           </h3>
@@ -589,17 +607,6 @@ export default function Waterford1215Property() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-span-3 lg:col-span-1 p-5 lg:border-l lg:border-[#B4B4B4]">
-                  <iframe
-                    id="booking-iframe"
-                    sandbox="allow-top-navigation allow-scripts allow-same-origin"
-                    style={{ width: "100%", height: "750px", border: "none" }}
-                    src={`https://booking.hospitable.com/widget/${process.env.NEXT_PUBLIC_HOSPITABLE_WIDGET_ID}/${process.env.NEXT_PUBLIC_PROPERTY_WATERFORD_1215}`}
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
