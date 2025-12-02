@@ -13,8 +13,8 @@ export default function Home() {
           {/* Logo */}
           <div className='flex-shrink-0 rounded-full p-6 md:p-10 bg-white/50'>
             <Image 
-              src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
-              //src="/Logo.PNG"
+             // src="https://infobrarpmgsite-cloud.github.io/brarpmg/Logo.PNG"
+              src="/logo.png"
               alt="BPMG STAYS"
               width={400}
               height={400}
